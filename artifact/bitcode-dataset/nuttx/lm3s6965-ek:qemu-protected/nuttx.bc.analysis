@@ -1,0 +1,38 @@
+# of Node vs. Analysis time: 1778 140
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 8)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+Non-HAL: nx_start_application /home/mjshen/RTOSExploration/nuttxspace/nuttx/sched/init/nx_bringup.c:260:3 13 0 1 0
+Non-HAL: umm_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_initialize.c:84:3 8 0 1 0
+Non-HAL: free /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_free.c:49:11 1034 0 1 0
+Non-HAL: malloc /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_malloc.c:62:20 63 0 1 0
+Non-HAL: realloc /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_realloc.c:97:21 20 0 1 0
+Non-HAL: mallinfo /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_mallinfo.c:49:15 5 0 1 0
+Non-HAL: memalign /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_memalign.c:89:22 7 0 1 0
+Non-HAL: zalloc /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_zalloc.c:69:20 8 0 1 0
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 17)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_irq.c:419:16 11 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 0 0 0
+HAL: arm_memfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_memfault.c:63:19 2 0 0 0
+HAL: arm_svcall /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_svcall.c:297:55 4 0 0 0
+HAL: tiva_clock_reconfigure /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/lm4xx_tm3c_sysctrl.c:189:10 9 0 0 0
+HAL: tiva_pll_lock /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/lm4xx_tm3c_sysctrl.c:151:12 9 0 0 0
+HAL: tiva_userspace /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_userspace.c:72:3 5 0 0 0
+HAL: tiva_mpuinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_mpuinit.c:71:25 6 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_lowputc.c:221:11 5 0 0 0
+HAL: mpu_control /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_mpu.c:358:3 7 0 0 0
+HAL: mpu_configure_region /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_mpu.c:399:3 14 0 0 0
+HAL: tiva_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_lowputc.c:392:9 8 0 0 0
+HAL: up_allocate_heap /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_allocateheap.c:100:43 8 0 0 0
+HAL: up_allocate_kheap /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_allocateheap.c:155:43 9 0 0 0
+HAL: tiva_ethinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/lm/lm3s_ethernet.c:1600:3 9 0 0 0
+HAL: tiva_ethreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/lm/lm3s_ethernet.c:353:13 11 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_timerisr.c:101:12 9 0 0 0
+-------------------------------------------------
+

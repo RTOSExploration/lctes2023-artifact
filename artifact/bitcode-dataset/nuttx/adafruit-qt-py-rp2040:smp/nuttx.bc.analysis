@@ -1,0 +1,43 @@
+# of Node vs. Analysis time: 1232 89
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 30)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: clocks_init /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_clock.c:190:3 4 0 0 0
+HAL: rp2040_clockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_clock.c:309:3 4 0 0 0
+HAL: rp2040_xosc_init /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_xosc.c:79:3 4 0 0 0
+HAL: up_cpu_index /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_cpuindex.c:56:10 678 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_irq.c:229:3 5 0 0 0
+HAL: up_disable_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_irq.c:323:7 14 0 0 0
+HAL: up_enable_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_irq.c:371:7 9 0 0 0
+HAL: rp2040_clrpend /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_irq.c:210:7 3 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_uart.c:138:11 4 0 0 0
+HAL: rp2040_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_uart.c:163:8 2 0 0 0
+HAL: arm_pause_handler /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_cpupause.c:234:10 2 0 0 0
+HAL: up_cpu_pause /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_cpupause.c:337:12 551 0 0 0
+HAL: rp2040_send_irqreq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_cpupause.c:423:12 14 0 0 0
+HAL: arm_ramvec_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv6-m/arm_ramvec_initialize.c:103:31 6 0 0 0
+HAL: rp2040_boardearlyinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/rp2040/common/board/rp2040_boardinitialize.c:60:3 3 1 0 0
+HAL: rp2040_gpio_setdir /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_gpio.h:125:7 3 0 0 0
+HAL: rp2040_gpio_put /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_gpio.h:100:7 3 0 0 0
+HAL: up_cpu_start /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_cpustart.c:211:3 4 0 0 0
+HAL: fifo_drain /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_cpustart.c:85:3 5 0 0 0
+HAL: fifo_comm /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_cpustart.c:113:12 5 0 0 0
+HAL: up_testset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_testset.c:68:10 551 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_timerisr.c:103:12 4 0 0 0
+HAL: rp2040_gpio_put.2309 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_gpio.h:96:7 7 0 0 0
+HAL: rp2040_gpio_setdir.2310 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_gpio.h:121:7 3 0 0 0
+HAL: up_systemreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv6-m/arm_systemreset.c:57:3 11 0 0 0
+HAL: arm_dma_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_dmac.c:173:3 4 0 0 0
+HAL: rp2040_dmac_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_dmac.c:107:10 2 0 0 0
+HAL: rp2040_dmachannel /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_dmac.c:250:3 4 0 0 0
+HAL: rp2040_dmafree /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_dmac.c:292:3 2 0 0 0
+HAL: rp2040_dmastop /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_dmac.c:486:3 1 0 0 0
+-------------------------------------------------
+

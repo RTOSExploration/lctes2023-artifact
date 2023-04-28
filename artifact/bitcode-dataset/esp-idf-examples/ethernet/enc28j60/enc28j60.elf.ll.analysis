@@ -1,0 +1,55 @@
+# of Node vs. Analysis time: 2220 216
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 42)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: esp_restart_noos_dig /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_system/esp_system.c:45:5 14 0 0 0
+HAL: esp_timer_impl_get_counter_reg /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_timer/src/esp_timer_impl_lac.c:111:25 3 0 0 0
+HAL: call_start_cpu1 /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_system/port/cpu_start.c:158:5 3 1 0 0
+HAL: esp_perip_clk_init /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_system/port/soc/esp32/clk.c:287:5 5 0 0 0
+HAL: esp_cache_err_int_init /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_system/port/soc/esp32/cache_err_int.c:0 5 0 0 0
+HAL: esp_reset_reason_get_hint /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_system/port/soc/esp32/reset_reason.c:108:34 13 0 0 0
+HAL: esp_reset_reason_set_hint /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_system/port/soc/esp32/reset_reason.c:102:5 15 0 0 0
+HAL: esp_restart_noos /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_system/port/soc/esp32/system_internal.c:96:5 20 0 0 0
+HAL: esp_cpu_stall /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/cpu.c:55:5 20 0 0 0
+HAL: esp_cpu_unstall /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/cpu.c:77:5 20 0 0 0
+HAL: esp_cpu_reset /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/cpu.c:95:5 20 0 0 0
+HAL: rtc_isr /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/rtc_module.c:60:23 2 0 0 0
+HAL: rtc_clk_32k_enable /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:0 6 0 0 0
+HAL: rtc_clk_32k_bootstrap /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:150:5 2 0 0 0
+HAL: rtc_clk_8m_enable /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:0 11 0 0 0
+HAL: rtc_clk_apll_enable /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:0 4 0 0 0
+HAL: rtc_clk_slow_src_set /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:0 6 0 0 0
+HAL: rtc_clk_cpu_freq_to_xtal /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:367:5 2 0 0 0
+HAL: rtc_init /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_init.c:19:5 6 0 0 0
+HAL: rtc_vddsdio_get_config /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_init.c:102:30 2 0 0 0
+HAL: rtc_vddsdio_set_config /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_init.c:148:5 2 0 0 0
+HAL: rtc_clk_cal_internal /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c:50:5 10 0 0 0
+HAL: rtc_time_get /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c:155:5 17 0 0 0
+HAL: rtc_clk_wait_for_slow_cycle /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c:173:5 22 0 0 0
+HAL: esp_time_impl_set_boot_time /home/mjshen/RTOSExploration/esp/esp-idf/components/newlib/port/esp_time_impl.c:93:5 9 1 0 0
+HAL: esp_time_impl_get_boot_time /home/mjshen/RTOSExploration/esp/esp-idf/components/newlib/port/esp_time_impl.c:106:26 9 1 0 0
+HAL: esp_timer_impl_get_alarm_reg /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_timer/src/esp_timer_impl_lac.c:286:15 1 0 0 0
+HAL: esp_timer_impl_set_alarm_id /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_timer/src/esp_timer_impl_lac.c:157:13 29 0 0 0
+HAL: esp_timer_impl_update_apb_freq /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_timer/src/esp_timer_impl_lac.c:194:5 5 0 0 0
+HAL: esp_timer_impl_set /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_timer/src/esp_timer_impl_lac.c:202:5 2 0 0 0
+HAL: esp_timer_impl_early_init /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_timer/src/esp_timer_impl_lac.c:218:5 5 0 0 0
+HAL: esp_timer_impl_init /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_timer/src/esp_timer_impl_lac.c:251:5 5 0 0 0
+HAL: timer_alarm_isr /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_timer/src/esp_timer_impl_lac.c:184:5 2 0 0 0
+HAL: esp_timer_impl_deinit /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_timer/src/esp_timer_impl_lac.c:267:5 4 0 0 0
+HAL: bootloader_flash_cs_timing_config /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32.c:38:5 4 1 0 0
+HAL: bootloader_flash_gpio_config /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32.c:85:9 2 1 0 0
+HAL: bootloader_flash_dummy_config /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32.c:126:24 3 1 0 0
+HAL: spi_flash_restore_cache /home/mjshen/RTOSExploration/esp/esp-idf/components/spi_flash/cache_utils.c:383:9 51 0 0 0
+HAL: spi_flash_disable_cache /home/mjshen/RTOSExploration/esp/esp-idf/components/spi_flash/cache_utils.c:352:9 46 0 0 0
+HAL: esp_crosscore_isr /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_system/crosscore_int.c:57:9 4 0 0 0
+HAL: efuse_hal_get_major_chip_version /home/mjshen/RTOSExploration/esp/esp-idf/components/hal/esp32/efuse_hal.c:19:25 8 1 0 0
+HAL: esp_random /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/hw_random.c:51:19 174 0 0 0
+-------------------------------------------------
+

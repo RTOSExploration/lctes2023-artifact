@@ -1,0 +1,22 @@
+# of Node vs. Analysis time: 1220 65
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 9)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: SystemInit /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/system_nrf52.c:201:48 2 1 0 0
+HAL: nrf52_errata_36 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:1833:29 2 1 0 0
+HAL: nrf52_errata_66 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:3159:29 3 1 0 0
+HAL: nrf52_errata_98 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:5137:29 3 1 0 0
+HAL: nrf52_errata_103 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:5299:29 2 1 0 0
+HAL: nrf52_errata_115 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:5845:29 3 1 0 0
+HAL: nrf52_errata_120 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:6075:29 4 1 0 0
+HAL: nrf52_errata_136 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:6574:29 3 1 0 0
+HAL: nrf52_configuration_249 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:13010:29 3 1 0 0
+-------------------------------------------------
+

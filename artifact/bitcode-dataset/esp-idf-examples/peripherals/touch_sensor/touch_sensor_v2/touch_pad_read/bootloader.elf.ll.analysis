@@ -1,0 +1,56 @@
+# of Node vs. Analysis time: 269 45
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 43)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: bootloader_reset /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c:867:5 3 0 0 0
+HAL: bootloader_sha256_data /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/src/esp32/bootloader_sha.c:47:16 25 0 0 0
+HAL: bootloader_sha256_finish /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/src/esp32/bootloader_sha.c:106:12 19 0 0 0
+HAL: bootloader_configure_spi_pins /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/src/esp32/bootloader_esp32.c:0 3 0 0 0
+HAL: esp_cpu_stall /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/cpu.c:55:5 3 1 0 0
+HAL: wdt_reset_info_dump /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/src/esp32/bootloader_esp32.c:284:16 13 0 0 0
+HAL: bootloader_clock_configure /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/src/bootloader_clock_init.c:68:5 11 0 0 0
+HAL: bootloader_fill_random /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/src/bootloader_random.c:45:22 30 0 0 0
+HAL: bootloader_random_enable /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/src/bootloader_random_esp32.c:26:5 11 0 0 0
+HAL: bootloader_random_disable /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/src/bootloader_random_esp32.c:82:5 6 0 0 0
+HAL: bootloader_flash_cs_timing_config /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32.c:38:5 12 0 0 0
+HAL: bootloader_flash_gpio_config /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32.c:85:9 10 0 0 0
+HAL: bootloader_flash_dummy_config /home/mjshen/RTOSExploration/esp/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32.c:126:24 10 0 0 0
+HAL: esp_cpu_unstall /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/cpu.c:77:5 2 1 0 0
+HAL: esp_cpu_reset /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/cpu.c:95:5 2 1 0 0
+HAL: rtc_clk_32k_enable /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:0 12 0 0 0
+HAL: rtc_clk_32k_bootstrap /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:150:5 3 0 0 0
+HAL: rtc_clk_8m_enable /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:0 17 0 0 0
+HAL: rtc_clk_apll_enable /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:0 2 0 0 0
+HAL: rtc_clk_slow_src_set /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:0 11 0 0 0
+HAL: rtc_clk_cpu_freq_to_xtal /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:367:5 12 0 0 0
+HAL: rtc_clk_cpu_freq_to_pll_mhz /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk.c:391:5 14 0 0 0
+HAL: rtc_clk_init /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_clk_init.c:62:5 11 0 0 0
+HAL: rtc_init /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_init.c:19:5 3 0 0 0
+HAL: rtc_vddsdio_get_config /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_init.c:102:30 15 0 0 0
+HAL: rtc_vddsdio_set_config /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_init.c:148:5 12 0 0 0
+HAL: rtc_clk_cal_internal /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c:50:5 16 0 0 0
+HAL: rtc_time_get /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c:155:5 3 0 0 0
+HAL: rtc_clk_wait_for_slow_cycle /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_hw_support/port/esp32/rtc_time.c:173:5 14 0 0 0
+HAL: esp_rom_spiflash_wait_idle /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:33:13 62 0 0 0
+HAL: esp_rom_spiflash_read_status /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:222:13 62 0 0 0
+HAL: esp_rom_spiflash_clear_bp /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:77:9 3 0 0 0
+HAL: esp_rom_spiflash_write_status /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:253:5 6 0 0 0
+HAL: esp_rom_spiflash_set_bp /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:382:5 3 0 0 0
+HAL: esp_rom_spiflash_enable_write /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:321:5 26 0 0 0
+HAL: esp_rom_spiflash_config_readmode /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:399:13 3 0 0 0
+HAL: esp_rom_spiflash_erase_block /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:440:5 6 0 0 0
+HAL: esp_rom_spiflash_erase_sector /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:460:5 8 0 0 0
+HAL: esp_rom_spiflash_write /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:486:5 6 0 0 0
+HAL: esp_rom_spiflash_program_page_internal /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:189:13 6 0 0 0
+HAL: esp_rom_spiflash_read /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:555:15 43 0 0 0
+HAL: esp_rom_spiflash_write_disable /home/mjshen/RTOSExploration/esp/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c:684:5 3 0 0 0
+HAL: efuse_hal_get_major_chip_version /home/mjshen/RTOSExploration/esp/esp-idf/components/hal/esp32/efuse_hal.c:19:25 58 0 0 0
+-------------------------------------------------
+

@@ -1,0 +1,37 @@
+# of Node vs. Analysis time: 953 60
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 24)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_irq.c:309:7 4 1 0 0
+HAL: nrf52_clrpend /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_utils.c:59:11 3 1 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 1 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_lowputc.c:440:3 4 1 0 0
+HAL: nrf_nvmc_enable_icache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:125:11 2 1 0 0
+HAL: nrf_nvmc_enable_profile /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:161:11 2 1 0 0
+HAL: nrf_nvmc_get_profiling_ihit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:193:10 2 1 0 0
+HAL: nrf_nvmc_get_profiling_imiss /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:212:10 2 1 0 0
+HAL: nrf_nvmc_get_flash_size /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:231:10 1 1 0 0
+HAL: nrf_nvmc_get_ram_size /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:250:10 3 1 0 0
+HAL: nrf_nvmc_read_dev_id0 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:269:10 2 1 0 0
+HAL: nrf_nvmc_read_dev_id1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:288:10 1 1 0 0
+HAL: nrf_nvmc_page_erase /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:377:3 2 1 0 0
+HAL: wait_for_flash_ready /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:76:12 8 1 0 0
+HAL: nrf_nvmc_write_byte /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:417:3 4 1 0 0
+HAL: nrf_nvmc_write_word /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:450:3 1 1 0 0
+HAL: nrf_nvmc_write_words /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/nrf52_nvmc.c:514:3 2 1 0 0
+HAL: systick_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_systick.c:275:24 6 1 0 0
+HAL: systick_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_systick.c:236:25 4 1 0 0
+HAL: systick_is_running /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_systick.c:106:13 9 1 0 0
+HAL: systick_start /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_systick.c:123:3 2 1 0 0
+HAL: systick_getstatus /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_systick.c:142:38 1 1 0 0
+HAL: systick_settimeout /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_systick.c:187:7 2 1 0 0
+HAL: systick_irq_pending /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_systick.c:117:17 2 1 0 0
+-------------------------------------------------
+

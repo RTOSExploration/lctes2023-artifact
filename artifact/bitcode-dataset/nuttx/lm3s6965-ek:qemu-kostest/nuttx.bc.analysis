@@ -1,0 +1,34 @@
+# of Node vs. Analysis time: 852 48
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 6)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+Non-HAL: nx_start_application /home/mjshen/RTOSExploration/nuttxspace/nuttx/sched/init/nx_bringup.c:260:3 4 1 1 0
+Non-HAL: umm_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_initialize.c:84:3 3 0 1 0
+Non-HAL: free /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_free.c:49:11 424 0 1 0
+Non-HAL: malloc /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_malloc.c:62:20 34 0 1 0
+Non-HAL: mallinfo /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_mallinfo.c:49:15 3 0 1 0
+Non-HAL: zalloc /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_zalloc.c:69:20 6 0 1 0
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 15)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: tiva_clock_reconfigure /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/lm4xx_tm3c_sysctrl.c:189:10 3 1 0 0
+HAL: tiva_pll_lock /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/lm4xx_tm3c_sysctrl.c:151:12 4 1 0 0
+HAL: tiva_userspace /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_userspace.c:72:3 2 1 0 0
+HAL: tiva_mpuinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_mpuinit.c:71:25 4 1 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_lowputc.c:221:11 3 1 0 0
+HAL: mpu_control /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_mpu.c:358:3 4 1 0 0
+HAL: mpu_configure_region /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_mpu.c:399:3 6 1 0 0
+HAL: tiva_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_lowputc.c:392:9 3 1 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_irq.c:419:16 3 1 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 1 0 0
+HAL: arm_memfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_memfault.c:63:19 2 1 0 0
+HAL: arm_svcall /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_svcall.c:297:55 4 1 0 0
+HAL: up_allocate_heap /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_allocateheap.c:100:43 3 1 0 0
+HAL: up_allocate_kheap /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_allocateheap.c:155:43 4 1 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_timerisr.c:101:12 4 1 0 0
+-------------------------------------------------
+

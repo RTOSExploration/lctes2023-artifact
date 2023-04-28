@@ -1,0 +1,43 @@
+# of Node vs. Analysis time: 1261 84
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 30)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: s32k1xx_cache_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_start.c:144:3 3 0 0 0
+HAL: s32k1xx_wdog_disable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_wdog.h:67:3 4 0 0 0
+HAL: s32k1xx_allow_vlprmode /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:1708:14 5 0 0 0
+HAL: s32k1xx_get_runmode /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:2378:11 9 0 0 0
+HAL: s32k1xx_set_runmode /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:2455:22 3 0 0 0
+HAL: s32k1xx_get_sircfreq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:301:8 21 0 0 0
+HAL: s32k1xx_scg_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:1445:21 4 0 0 0
+HAL: s32k1xx_sim_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:1505:17 3 0 0 0
+HAL: s32k1xx_pmc_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:1665:16 4 0 0 0
+HAL: s32k1xx_set_sysclk_cfg /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:499:15 7 0 0 0
+HAL: s32k1xx_get_soscfreq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:273:8 31 0 0 0
+HAL: s32k1xx_get_fircfreq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:332:8 29 0 0 0
+HAL: s32k1xx_get_spllfreq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:366:8 20 0 0 0
+HAL: s32k1xx_sirc_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:825:12 5 0 0 0
+HAL: s32k1xx_sosc_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:991:12 10 0 0 0
+HAL: s32k1xx_spll_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:1123:12 6 0 0 0
+HAL: s32k1xx_firc_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:670:12 16 0 0 0
+HAL: s32k1xx_get_scgclk_source /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:251:12 20 0 0 0
+HAL: s32k1xx_get_coreclk /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:2608:13 5 0 0 0
+HAL: s32k1xx_get_sysclk /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:2698:13 18 0 0 0
+HAL: s32k1xx_get_asnchfreq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_clockconfig.c:2760:28 18 0 0 0
+HAL: up_rtc_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_rtc.c:139:13 5 0 0 0
+HAL: s32k1xx_rtc_enable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_rtc.c:85:13 10 0 0 0
+HAL: up_rtc_gettime /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_rtc.c:251:19 26 0 0 0
+HAL: up_rtc_settime /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_rtc.c:301:3 6 0 0 0
+HAL: s32k1xx_rtc_disable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k1xx_rtc.c:110:13 6 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k14x/s32k14x_timerisr.c:102:3 5 1 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k14x/s32k14x_irq.c:342:7 7 1 0 0
+HAL: s32k14x_clrpend /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k14x/s32k14x_clrpend.c:60:11 4 1 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 4 1 0 0
+-------------------------------------------------
+

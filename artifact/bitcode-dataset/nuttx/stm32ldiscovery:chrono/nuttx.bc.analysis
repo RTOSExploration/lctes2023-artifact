@@ -1,0 +1,45 @@
+# of Node vs. Analysis time: 591 41
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 32)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_irq.c:314:7 4 0 0 0
+HAL: stm32_rtc_is_initialized /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rtcc.c:848:12 8 0 0 0
+HAL: up_rtc_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rtcc.c:928:20 8 0 0 0
+HAL: rtc_wprunlock /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rtcc.c:241:3 9 0 0 0
+HAL: rtc_enterinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rtcc.c:337:12 9 0 0 0
+HAL: stm32_exti3_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:136:3 2 0 0 0
+HAL: stm32_exti4_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:157:3 2 0 0 0
+HAL: stm32_exti0_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:73:3 2 0 0 0
+HAL: stm32_exti_multiisr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:181:8 10 0 0 0
+HAL: rcc_resetbkp /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_rcc.c:122:12 4 0 0 0
+HAL: stm32_stdclockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rcc.c:529:13 4 0 0 0
+HAL: rcc_enableahb /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rcc.c:214:3 6 0 0 0
+HAL: rcc_enableapb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rcc.c:398:12 6 0 0 0
+HAL: rcc_enableapb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rcc.c:233:13 5 0 0 0
+HAL: stm32_rcc_enablelse /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_lse.c:65:11 15 0 0 0
+HAL: stm32_pwr_putreg32 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_pwr.c:82:3 24 0 0 0
+HAL: rtc_wprlock /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rtcc.c:263:3 10 0 0 0
+HAL: rtc_exitinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rtcc.c:381:12 10 0 0 0
+HAL: rtc_synchwait /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rtcc.c:293:13 11 0 0 0
+HAL: stm32_rtc_getdatetime_with_subseconds /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rtcc.c:1075:13 13 0 0 0
+HAL: stm32_rtc_setdatetime /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rtcc.c:1293:7 3 0 0 0
+HAL: stm32_rtc_havesettime /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l15xxx_rtcc.c:1333:10 2 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 1 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_timerisr.c:116:12 8 0 0 0
+HAL: stm32_exti1_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:94:3 1 0 0 0
+HAL: stm32_exti2_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:115:3 2 0 0 0
+HAL: stm32_slcd_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/stm32/common/board/stm32_lcd.c:1561:17 6 0 0 0
+HAL: slcd_clear /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/stm32/common/board/stm32_lcd.c:511:11 6 0 0 0
+HAL: slcd_writebar /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/stm32/common/board/stm32_lcd.c:610:11 2 0 0 0
+HAL: slcd_getcontrast /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/stm32/common/board/stm32_lcd.c:563:11 2 0 0 0
+HAL: slcd_setcontrast /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/stm32/common/board/stm32_lcd.c:583:12 3 0 0 0
+HAL: slcd_writemem /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/stm32/common/board/stm32_lcd.c:745:11 14 0 0 0
+-------------------------------------------------
+

@@ -1,0 +1,84 @@
+# of Node vs. Analysis time: 302 60
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 3)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+Non-HAL: lzma_decode2flash /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/middleware/third_party/lzma_decoder/src/lzma_decode_interface.c:324:9 7 1 1 0
+Non-HAL: Decode2Ram /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/middleware/third_party/lzma_decoder/src/lzma_decode_interface.c:224:17 7 1 1 0
+Non-HAL: Write2Flash /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/middleware/third_party/lzma_decoder/src/lzma_decode_interface.c:142:13 8 1 1 0
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 68)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: SF_DAL_Dev_ReadStatus /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_dal.c:3543:33 16 0 0 0
+HAL: hal_cache_flush_one_cache_line /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:364:21 2 0 0 0
+HAL: hal_cache_flush_all_cache_lines /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:412:21 2 0 0 0
+HAL: hal_cache_is_cacheable /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:429:18 42 0 0 0
+HAL: NVIC_DisableIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1509:3 6 1 0 0
+HAL: SFI_MacEnable /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_common.c:116:16 70 0 0 0
+HAL: SFI_MacLeave /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_common.c:153:16 64 0 0 0
+HAL: SFI_MacTrigger /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_common.c:204:16 64 0 0 0
+HAL: bl_hardware_init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_main.c:59:16 3 0 0 0
+HAL: bl_set_usb_sleep /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_main.c:150:19 3 0 0 0
+HAL: __EMI_EnableDataAutoTracking /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/emi/src/emi_init.c:273:15 8 0 0 0
+HAL: custom_setAdvEMI /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/emi/src/emi_init.c:360:14 4 0 0 0
+HAL: EMI_DynamicClockSwitch /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/emi/src/emi_init.c:420:17 2 0 0 0
+HAL: mtk_psram_half_sleep_exit /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/emi/src/emi_init.c:451:16 2 0 0 0
+HAL: mtk_psram_half_sleep_enter /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/emi/src/emi_init.c:473:13 3 0 0 0
+HAL: hal_cache_init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:80:22 2 0 0 0
+HAL: hal_cache_invalidate_all_cache_lines /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:335:21 8 0 0 0
+HAL: hal_cache_deinit /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:110:22 2 0 0 0
+HAL: hal_cache_enable /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:142:22 2 0 0 0
+HAL: hal_cache_disable /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:158:16 2 0 0 0
+HAL: hal_cache_region_enable /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:183:9 3 0 0 0
+HAL: hal_cache_region_disable /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:203:28 2 0 0 0
+HAL: hal_cache_set_size /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:223:22 2 0 0 0
+HAL: hal_cache_region_config /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:262:5 2 0 0 0
+HAL: hal_cache_invalidate_one_cache_line /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_cache.c:287:21 27 0 0 0
+HAL: bl_uart_init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_uart.c:99:38 3 0 0 0
+HAL: bl_clock_freq_monitor /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_clock.c:56:27 7 0 0 0
+HAL: clock_set_pll_dcm_init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_clock.c:121:24 4 0 0 0
+HAL: clock_set_pll_init4flash_tool /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_clock.c:518:19 2 0 0 0
+HAL: bl_gpt_start_free_run_timer /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_gpt.c:64:11 68 0 0 0
+HAL: __EMI_GetSR /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/emi/src/emi_init.c:68:18 15 0 0 0
+HAL: __EMI_SetSR /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/emi/src/emi_init.c:83:18 2 0 0 0
+HAL: dump_EMI_Setting /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/emi/src/emi_init.c:117:46 8 0 0 0
+HAL: EMI_PowerOn_Init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/emi/src/emi_init.c:165:26 9 0 0 0
+HAL: __EMI_EnableBandwidthLimiter /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/emi/src/emi_init.c:209:15 5 0 0 0
+HAL: TestCase_MBIST /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/emi/src/emi_init.c:231:17 8 0 0 0
+HAL: bl_bonding_io_reg /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_misc.c:55:16 6 0 0 0
+HAL: bl_d2d_io_pull_down /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_misc.c:85:52 4 0 0 0
+HAL: f32k_measure_clock /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_dcxo_cal.c:81:44 3 0 0 0
+HAL: set_capid /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_dcxo_cal.c:122:32 7 0 0 0
+HAL: write_efuse_capid /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_dcxo_cal.c:185:29 2 0 0 0
+HAL: read_efuse_capid /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_dcxo_cal.c:279:29 2 0 0 0
+HAL: bl_dcxo_load_calibration /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_dcxo_cal.c:355:32 4 0 0 0
+HAL: bl_dcxo_capid_init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_dcxo_cal.c:372:32 5 0 0 0
+HAL: bl_pmic_init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_pmic.c:62:22 3 0 0 0
+HAL: hal_usbphy_poweron_initialize /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_usb.c:51:2 10 0 0 0
+HAL: hal_usbphy_save_current /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_usb.c:75:2 11 0 0 0
+HAL: bl_usb_low_power_setting /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_usb.c:112:36 10 0 0 0
+HAL: wdt_set_length /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_wdt.c:49:50 5 0 0 0
+HAL: wdt_set_mode_register_by_bit /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_wdt.c:60:27 5 0 0 0
+HAL: hal_wdt_enable /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_wdt.c:104:51 3 0 0 0
+HAL: hal_wdt_feed /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_wdt.c:111:51 9 0 0 0
+HAL: hal_wdt_software_reset /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/board/mt25x3_hdk/bootloader/core/src/bl_wdt.c:119:50 5 0 0 0
+HAL: SF_DAL_Dev_Command /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_dal.c:3567:33 7 0 0 0
+HAL: SF_DAL_Dev_ReadID /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_dal.c:3405:9 15 0 0 0
+HAL: custom_setSFI /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_custom_sfi.c:110:5 7 0 0 0
+HAL: custom_setSFIExt /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_custom_sfi.c:224:16 4 0 0 0
+HAL: SFI_Dev_Command /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_common.c:263:33 28 0 0 0
+HAL: SFI_Dev_CommandAddress /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_common.c:294:33 3 0 0 0
+HAL: SFI_GPRAM_Write_C1A4 /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_common.c:349:38 3 0 0 0
+HAL: SFI_Dev_Command_Ext /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_common.c:428:25 48 0 0 0
+HAL: SFI_Dev_Command_List /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_common.c:474:11 8 0 0 0
+HAL: SFI_Dev_WorkingVoltageQuery /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_common.c:564:15 4 0 0 0
+HAL: SF_DAL_ProgramData /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_flash_mtd_dal.c:2633:37 2 0 0 0
+HAL: NVIC_EnableIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1497:3 3 1 0 0
+HAL: NVIC_ClearPendingIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1549:3 2 1 0 0
+HAL: software_trigger_irq /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_nvic_internal.c:47:16 4 0 0 0
+HAL: hal_nvic_query_exception_number /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_nvic_internal.c:116:19 3 0 0 0
+-------------------------------------------------
+

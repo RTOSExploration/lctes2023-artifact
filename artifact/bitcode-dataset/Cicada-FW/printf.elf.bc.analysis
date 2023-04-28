@@ -1,0 +1,62 @@
+# of Node vs. Analysis time: 278 8
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 49)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: HAL_RCC_GetSysClockFreq /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:1102:17 3 0 0 1
+HAL: HAL_RCC_GetOscConfig /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:1227:13 2 0 0 1
+HAL: HAL_RCC_GetClockConfig /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:1322:53 2 0 0 1
+HAL: HAL_RCC_NMI_IRQHandler /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:1350:7 2 0 0 1
+HAL: HAL_Init /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:152:3 2 0 0 1
+HAL: __NVIC_GetActive /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1621:25 3 0 0 1
+HAL: HAL_SYSTICK_CLKSourceConfig /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c:0 3 0 0 1
+HAL: HAL_GPIO_Init /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c:291:9 3 0 0 1
+HAL: HAL_GPIO_DeInit /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c:374:13 4 0 0 1
+HAL: HAL_RCC_MCOConfig /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:1022:3 2 0 0 1
+HAL: HAL_RCC_EnableCSS /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:1041:38 3 0 0 1
+HAL: HAL_RCC_DisableCSS /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:1050:38 1 0 0 1
+HAL: HAL_RCC_GetPCLK1Freq /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:1190:56 8 0 0 1
+HAL: HAL_RCC_GetPCLK2Freq /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:1202:56 8 0 0 1
+HAL: HAL_DBGMCU_DisableDBGStopMode /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:544:3 2 0 0 1
+HAL: HAL_DBGMCU_EnableDBGStandbyMode /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:560:3 2 0 0 1
+HAL: HAL_DBGMCU_DisableDBGStandbyMode /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:576:3 4 0 0 1
+HAL: __NVIC_SetPriorityGrouping /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1485:22 3 0 0 1
+HAL: __NVIC_GetPriorityGrouping /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1501:28 11 0 0 1
+HAL: __NVIC_SetPriority /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1641:7 7 0 0 1
+HAL: __NVIC_EnableIRQ /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1515:5 4 0 0 1
+HAL: SystemInit /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c:161:11 2 0 0 1
+HAL: SystemCoreClockUpdate /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Device/ST/STM32F1xx/Source/Templates/system_stm32f1xx.c:260:14 1 0 0 1
+HAL: HAL_RCC_DeInit /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:210:3 3 0 0 1
+HAL: __NVIC_DisableIRQ /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1551:5 3 0 0 1
+HAL: __NVIC_SystemReset /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1767:34 2 0 0 1
+HAL: SysTick_Config /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1841:18 7 0 0 1
+HAL: HAL_RCC_OscConfig /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:368:10 4 0 0 1
+HAL: HAL_RCC_ClockConfig /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c:833:18 3 0 0 1
+HAL: _ZL17__NVIC_DisableIRQ9IRQn_Type /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1551:5 3 0 0 1
+HAL: _ZL18__NVIC_SetPriority9IRQn_Typej /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1641:7 3 0 0 1
+HAL: _ZL16__NVIC_EnableIRQ9IRQn_Type /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1515:5 4 0 0 1
+HAL: HAL_DeInit /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:178:3 2 0 0 1
+HAL: HAL_SuspendTick /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:389:3 2 0 0 1
+HAL: HAL_ResumeTick /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:405:3 2 0 0 1
+HAL: HAL_GetREVID /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:430:20 2 0 0 1
+HAL: HAL_GetDEVID /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:446:20 2 0 0 1
+HAL: HAL_GetUIDw0 /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:455:11 3 0 0 1
+HAL: HAL_GetUIDw1 /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:464:11 2 0 0 1
+HAL: HAL_GetUIDw2 /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:473:11 3 0 0 1
+HAL: HAL_DBGMCU_EnableDBGSleepMode /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:482:3 2 0 0 1
+HAL: HAL_DBGMCU_DisableDBGSleepMode /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:498:3 3 0 0 1
+HAL: HAL_DBGMCU_EnableDBGStopMode /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c:528:3 2 0 0 1
+HAL: __NVIC_GetPriority /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1664:7 2 0 0 1
+HAL: __NVIC_SetPendingIRQ /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1589:5 3 0 0 1
+HAL: __NVIC_GetPendingIRQ /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1570:25 3 0 0 1
+HAL: __NVIC_ClearPendingIRQ /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/CMSIS/Include/core_cm3.h:1604:5 3 0 0 1
+HAL: HAL_GPIO_EXTI_IRQHandler /home/mjshen/RTOSExploration/Cicada-FW/dep/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c:550:7 1 0 0 1
+HAL: _ZN6Cicada9Stm32Uart4openEh /home/mjshen/RTOSExploration/Cicada-FW/cicada/platform/stm32f1/stm32uart.cpp:121:9 2 0 0 1
+-------------------------------------------------
+

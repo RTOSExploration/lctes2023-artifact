@@ -1,0 +1,33 @@
+# of Node vs. Analysis time: 247 14
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 4)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+Non-HAL: SysTick_Set /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/project/mt2523_hdk/hal_examples/eint_edge_falling/src/system_mt2523.c:72:20 2 1 1 0
+Non-HAL: SystemCoreClockUpdate /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/project/mt2523_hdk/hal_examples/eint_edge_falling/src/system_mt2523.c:121:38 3 1 1 0
+Non-HAL: SystemInit /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/project/mt2523_hdk/hal_examples/eint_edge_falling/src/system_mt2523.c:162:16 1 1 1 0
+Non-HAL: CachePreInit /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/project/mt2523_hdk/hal_examples/eint_edge_falling/src/system_mt2523.c:183:22 2 1 1 0
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 16)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: gpt_reset_default_timer /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_gpt_internal.c:177:27 4 1 0 0
+HAL: NVIC_ClearPendingIRQ.95 /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1549:3 3 0 0 0
+HAL: software_trigger_irq /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_nvic_internal.c:47:16 3 1 0 0
+HAL: hal_nvic_query_exception_number /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_nvic_internal.c:116:19 2 1 0 0
+HAL: EMI_PowerOn_Init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_emi.c:257:26 3 1 0 0
+HAL: NVIC_SetPriority /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1582:5 5 0 0 0
+HAL: NVIC_EnableIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1497:3 15 0 0 0
+HAL: NVIC_DisableIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1509:3 11 0 0 0
+HAL: NVIC_GetPendingIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1525:23 3 0 0 0
+HAL: NVIC_SetPendingIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1537:3 4 0 0 0
+HAL: NVIC_ClearPendingIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1549:3 17 0 0 0
+HAL: NVIC_GetPriority /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1603:23 5 0 0 0
+HAL: get_current_irq /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_nvic.c:244:31 4 1 0 0
+HAL: get_pending_irq /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt2523/src/hal_nvic.c:123:19 4 1 0 0
+HAL: NVIC_DisableIRQ.93 /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1509:3 3 0 0 0
+HAL: NVIC_EnableIRQ.94 /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1497:3 3 0 0 0
+-------------------------------------------------
+

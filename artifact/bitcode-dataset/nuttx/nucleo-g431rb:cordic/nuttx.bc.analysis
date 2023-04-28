@@ -1,0 +1,27 @@
+# of Node vs. Analysis time: 745 33
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 14)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: rcc_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32g4xxxx_rcc.c:220:12 4 1 0 0
+HAL: stm32_stdclockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32g4xxxx_rcc.c:791:11 4 1 0 0
+HAL: rcc_enableahb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32g4xxxx_rcc.c:289:12 4 1 0 0
+HAL: rcc_enableahb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32g4xxxx_rcc.c:331:12 4 1 0 0
+HAL: rcc_enableahb3 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32g4xxxx_rcc.c:400:12 4 1 0 0
+HAL: rcc_enableapb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32g4xxxx_rcc.c:429:12 5 1 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_lowputc.c:399:11 6 1 0 0
+HAL: rcc_enableapb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32g4xxxx_rcc.c:549:12 5 1 0 0
+HAL: stm32_rcc_enablehsi /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32g4xxxx_rcc.c:664:13 6 1 0 0
+HAL: stm32_rcc_enablepll /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32g4xxxx_rcc.c:702:12 5 1 0 0
+HAL: stm32_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_lowputc.c:608:9 4 1 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_irq.c:314:7 3 1 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 1 1 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_timerisr.c:116:12 3 1 0 0
+-------------------------------------------------
+

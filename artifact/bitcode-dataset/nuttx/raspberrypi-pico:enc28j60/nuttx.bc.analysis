@@ -1,0 +1,38 @@
+# of Node vs. Analysis time: 1826 141
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 25)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: rp2040_gpio_setdir.323 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_gpio.h:125:7 9 0 0 0
+HAL: rp2040_gpio_put.324 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_gpio.h:100:7 8 0 0 0
+HAL: arm_dma_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_dmac.c:173:3 7 0 0 0
+HAL: rp2040_dmac_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_dmac.c:107:10 7 0 0 0
+HAL: rp2040_dmachannel /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_dmac.c:250:3 26 0 0 0
+HAL: rp2040_dmafree /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_dmac.c:292:3 2 0 0 0
+HAL: rp2040_dmastop /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_dmac.c:486:3 3 0 0 0
+HAL: clocks_init /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_clock.c:190:3 4 0 0 0
+HAL: rp2040_clockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_clock.c:309:3 3 0 0 0
+HAL: rp2040_xosc_init /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_xosc.c:79:3 4 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_uart.c:138:11 3 0 0 0
+HAL: rp2040_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_uart.c:163:8 3 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_irq.c:229:3 7 0 0 0
+HAL: up_disable_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_irq.c:323:7 23 0 0 0
+HAL: up_enable_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_irq.c:371:7 16 0 0 0
+HAL: rp2040_clrpend /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_irq.c:210:7 7 0 0 0
+HAL: arm_ramvec_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv6-m/arm_ramvec_initialize.c:103:31 8 1 0 0
+HAL: rp2040_boardearlyinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/rp2040/common/board/rp2040_boardinitialize.c:60:3 3 1 0 0
+HAL: rp2040_gpio_setdir /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_gpio.h:121:7 5 0 0 0
+HAL: rp2040_gpio_put /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_gpio.h:96:7 4 0 0 0
+HAL: rp2040_gpio_setdir.1244 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_gpio.h:121:7 8 0 0 0
+HAL: rp2040_gpio_put.2792 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_gpio.h:96:7 3 0 0 0
+HAL: up_systemreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv6-m/arm_systemreset.c:57:3 8 1 0 0
+HAL: rp2040_gpio_put.1245 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_gpio.h:96:7 7 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/rp2040_timerisr.c:103:12 7 0 0 0
+-------------------------------------------------
+

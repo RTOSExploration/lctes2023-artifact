@@ -1,0 +1,69 @@
+# of Node vs. Analysis time: 1431 128
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 8)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+Non-HAL: umm_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_initialize.c:84:3 4 0 1 0
+Non-HAL: free /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_free.c:49:11 89 0 1 0
+Non-HAL: malloc /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_malloc.c:62:20 43 0 1 0
+Non-HAL: realloc /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_realloc.c:97:21 20 0 1 0
+Non-HAL: nx_start_application /home/mjshen/RTOSExploration/nuttxspace/nuttx/sched/init/nx_bringup.c:263:34 4 1 1 0
+Non-HAL: umm_addregion /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_addregion.c:54:16 8 0 1 0
+Non-HAL: mallinfo /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_mallinfo.c:49:15 7 0 1 0
+Non-HAL: zalloc /home/mjshen/RTOSExploration/nuttxspace/nuttx/mm/umm_heap/umm_zalloc.c:69:20 16 0 1 0
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 48)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: lpc17_40_userspace /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_userspace.c:75:32 3 0 0 0
+HAL: lpc17_40_mpuinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_mpuinit.c:63:25 3 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_timerisr.c:103:13 6 0 0 0
+HAL: mpu_control /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_mpu.c:358:3 3 0 0 0
+HAL: mpu_configure_region /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_mpu.c:399:3 12 0 0 0
+HAL: lpc17_40_clockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc178x_40xx_clockconfig.c:104:3 2 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_lowputc.c:261:11 11 0 0 0
+HAL: lpc17_40_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_lowputc.c:311:13 3 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_irq.c:310:16 3 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 1 0 0 0
+HAL: arm_memfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_memfault.c:63:19 3 0 0 0
+HAL: arm_svcall /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_svcall.c:297:55 3 0 0 0
+HAL: open1788_sdram_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/lpc17xx_40xx/open1788/src/lpc17_40_sdraminitialize.c:120:3 5 1 0 0
+HAL: lpc17_40_dmarecvsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:2525:17 3 0 0 0
+HAL: lpc17_40_dmasendsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:2610:21 2 0 0 0
+HAL: lpc17_40_datadisable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:925:3 6 0 0 0
+HAL: lpc17_40_dataconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:894:3 5 0 0 0
+HAL: lpc17_40_configxfrints /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:588:3 17 0 0 0
+HAL: lpc17_40_endtransfer /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:1157:3 4 0 0 0
+HAL: lpc17_40_configwaitints /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:563:3 8 0 0 0
+HAL: lpc17_40_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:1222:21 2 0 0 0
+HAL: up_allocate_heap /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_allocateheap.c:212:43 5 0 0 0
+HAL: up_allocate_kheap /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_allocateheap.c:304:43 3 0 0 0
+HAL: lpc17_40_emcinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_emc.c:157:13 4 0 0 0
+HAL: arm_dma_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_gpdma.c:276:13 5 0 0 0
+HAL: gpdma_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_gpdma.c:198:16 3 0 0 0
+HAL: lpc17_40_dmastop /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_gpdma.c:627:3 7 0 0 0
+HAL: lpc17_40_dmaconfigure /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_gpdma.c:346:12 4 0 0 0
+HAL: lpc17_40_dmasetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_gpdma.c:470:12 6 0 0 0
+HAL: lpc17_40_dmastart /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_gpdma.c:564:3 6 0 0 0
+HAL: lpc17_40_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:1462:12 2 0 0 0
+HAL: lpc17_40_attach /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:1666:7 2 0 0 0
+HAL: lpc17_40_sendcmd /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:1703:3 3 0 0 0
+HAL: lpc17_40_cancel /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:1897:3 2 0 0 0
+HAL: lpc17_40_waitresponse /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:1974:11 2 0 0 0
+HAL: lpc17_40_recvshortcrc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:2064:16 2 0 0 0
+HAL: lpc17_40_recvlong /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:2129:16 2 0 0 0
+HAL: lpc17_40_recvshort /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:2187:16 1 0 0 0
+HAL: lpc17_40_recvnotimpl /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:2209:3 3 0 0 0
+HAL: lpc17_40_waitenable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:2272:3 2 0 0 0
+HAL: lpc17_40_recvfifo /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:1025:11 3 0 0 0
+HAL: lpc17_40_sendfifo /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:961:11 3 0 0 0
+HAL: lpc17_40_setpwrctrl /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:615:13 4 0 0 0
+HAL: lpc17_40_setclock /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:507:21 3 0 0 0
+HAL: lpc17_40_default /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:2723:3 4 0 0 0
+HAL: sdio_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_sdcard.c:2763:13 2 0 0 0
+HAL: up_fbinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_lcd.c:474:3 3 0 0 0
+HAL: up_fbuninitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_lcd.c:771:12 3 0 0 0
+-------------------------------------------------
+

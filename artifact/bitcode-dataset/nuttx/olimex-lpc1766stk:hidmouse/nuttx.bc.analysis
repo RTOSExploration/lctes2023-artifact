@@ -1,0 +1,46 @@
+# of Node vs. Analysis time: 1554 122
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 33)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: lpc17_40_clockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc176x_clockconfig.c:83:3 2 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_lowputc.c:261:11 8 0 0 0
+HAL: lpc17_40_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_lowputc.c:311:13 2 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_irq.c:310:16 5 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 1 0 0
+HAL: lpc17_40_ethinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:3161:13 3 0 0 0
+HAL: lpc17_40_ifup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:1553:3 4 0 0 0
+HAL: lpc17_40_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:1175:12 2 0 0 0
+HAL: lpc17_40_rxdone_work /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:856:13 2 0 0 0
+HAL: lpc17_40_txdone_work /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:1132:7 2 0 0 0
+HAL: lpc17_40_transmit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:638:13 11 0 0 0
+HAL: lpc17_40_txdesc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:581:13 13 0 0 0
+HAL: lpc17_40_txtimeout_expiry /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:1418:3 2 0 0 0
+HAL: lpc17_40_response /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:815:7 3 0 0 0
+HAL: lpc17_40_ethreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:3076:3 8 0 0 0
+HAL: lpc17_40_txdescinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:2877:3 5 0 0 0
+HAL: lpc17_40_rxdescinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:2933:3 4 0 0 0
+HAL: lpc17_40_usbhost_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:3819:13 1 0 0 0
+HAL: lpc17_40_cancel /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:3498:23 2 0 0 0
+HAL: lpc17_40_ep0init /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:3692:27 2 0 0 0
+HAL: lpc17_40_usbinterrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:1695:12 1 0 0 0
+HAL: lpc17_40_rh_enumerate /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:2128:3 3 0 0 0
+HAL: lpc17_40_addctrled /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:892:12 3 0 0 0
+HAL: lpc17_40_transfer_common /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:2876:21 4 0 0 0
+HAL: lpc17_40_enqueuetd /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:1504:27 7 0 0 0
+HAL: lpc17_40_ctrltd /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:1642:16 4 0 0 0
+HAL: lpc17_40_remctrled /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:933:12 3 0 0 0
+HAL: lpc17_40_rembulked /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:1062:13 2 0 0 0
+HAL: lpc17_40_reminted /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:1333:13 3 0 0 0
+HAL: lpc17_40_setinttab /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:1181:7 6 0 0 0
+HAL: lpc17_40_addbulked /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:1017:13 3 0 0 0
+HAL: lpc17_40_addinted /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_usbhost.c:1221:13 3 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_timerisr.c:103:13 3 0 0 0
+-------------------------------------------------
+

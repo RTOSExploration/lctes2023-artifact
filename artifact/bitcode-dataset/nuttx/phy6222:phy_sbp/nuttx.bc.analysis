@@ -1,0 +1,64 @@
+# of Node vs. Analysis time: 697 44
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 51)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: hal_spif_init /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/flash.c:159:37 5 0 0 0
+HAL: hal_cache_init /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/flash.c:212:21 4 0 0 0
+HAL: hal_cache_tag_flush /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/flash.c:92:25 6 0 0 0
+HAL: hw_spif_cache_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/flash.c:228:31 3 0 0 0
+HAL: hal_flash_read /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/flash.c:270:3 2 0 0 0
+HAL: hal_flash_write /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/flash.c:294:3 4 0 0 0
+HAL: hal_clk_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/clock.c:120:29 13 0 0 0
+HAL: _spif_read_status_reg_x /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/flash.c:128:3 7 0 0 0
+HAL: hal_flash_erase_sector /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/flash.c:307:25 2 0 0 0
+HAL: hal_clk_gate_enable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/clock.c:63:22 8 0 0 0
+HAL: hal_clk_gate_disable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/clock.c:79:22 11 0 0 0
+HAL: hal_clk_get_modules_state /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/clock.c:109:27 1 0 0 0
+HAL: hal_rtc_clock_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/clock.c:153:7 2 0 0 0
+HAL: h4uart_tx_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/uart.c:1179:24 2 0 0 0
+HAL: h4uart_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/uart.c:1192:26 2 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/irq.c:230:3 2 0 0 0
+HAL: up_enable_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/irq.c:424:7 15 0 0 0
+HAL: up_disable_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/irq.c:387:7 15 0 0 0
+HAL: phy62xx_clrpend /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/irq.c:173:7 4 0 0 0
+HAL: TIM1_IRQHandler1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/phy6222_patch.c:15:16 1 0 0 0
+HAL: _symrom_WaitUs /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/clock.c:230:32 1 0 0 0
+HAL: hal_system_soft_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/clock.c:248:21 2 0 0 0
+HAL: hal_GPIO_IRQHandler /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:608:30 2 0 0 0
+HAL: hal_gpio_interrupt_enable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:473:23 7 0 0 0
+HAL: hal_gpio_write /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:167:27 4 0 0 0
+HAL: hal_gpio_pin_init /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:258:28 7 0 0 0
+HAL: hal_gpio_fmux /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:213:30 31 0 0 0
+HAL: hal_gpio_pin2pin3_control /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:414:29 8 0 0 0
+HAL: hal_gpio_cfg_analog_io /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:346:30 9 0 0 0
+HAL: hal_gpio_pull_set /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:364:7 18 0 0 0
+HAL: hal_gpio_fast_write /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:181:27 2 0 0 0
+HAL: hal_gpio_read /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:193:16 4 0 0 0
+HAL: hal_gpio_fmux_set /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:234:7 9 0 0 0
+HAL: hal_gpio_ds_control /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:301:25 1 0 0 0
+HAL: hal_gpio_interrupt_disable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:156:3 4 0 0 0
+HAL: hal_gpio_wakeup_set /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:382:26 3 0 0 0
+HAL: hal_gpio_wakeup_control /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:277:26 4 0 0 0
+HAL: hal_gpioin_register /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:670:35 1 0 0 0
+HAL: hal_gpio_init /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:692:20 1 0 0 0
+HAL: h4uart_rx_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/uart.c:1149:19 3 0 0 0
+HAL: hal_gpio_retention_enable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:428:26 3 0 0 0
+HAL: hal_gpio_debug_mux /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/gpio.c:709:30 2 0 0 0
+HAL: hal_pwrmgr_LowCurrentLdo_disable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/pwrmgr.c:409:3 1 0 0 0
+HAL: hal_pwrmgr_poweroff /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/pwrmgr.c:437:22 2 0 0 0
+HAL: hal_UART1_IRQHandler /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/uart.c:483:31 1 0 0 0
+HAL: hal_UART0_IRQHandler /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/uart.c:449:31 3 0 0 0
+HAL: hal_TIMER5_IRQHandler /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/timer.c:75:16 1 0 0 0
+HAL: hal_TIMER6_IRQHandler /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/timer.c:86:16 1 0 0 0
+HAL: hal_timer_set /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/timer.c:127:43 2 0 0 0
+HAL: hal_timer_stop /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/timer.c:154:43 2 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/timer.c:203:3 3 0 0 0
+-------------------------------------------------
+

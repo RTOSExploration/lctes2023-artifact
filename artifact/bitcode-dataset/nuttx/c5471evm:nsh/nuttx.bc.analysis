@@ -1,0 +1,34 @@
+# of Node vs. Analysis time: 1239 77
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 21)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: c5471_ifup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_ethernet.c:1806:15 5 0 0 0
+HAL: c5471_ifdown /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_ethernet.c:1859:3 4 0 0 0
+HAL: c5471_transmit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_ethernet.c:970:7 5 0 0 0
+HAL: c5471_macassign /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_ethernet.c:2330:3 5 0 0 0
+HAL: c5471_eimreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_ethernet.c:2042:3 6 0 0 0
+HAL: c5471_phyinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_ethernet.c:729:3 7 0 0 0
+HAL: c5471_eimconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_ethernet.c:2095:3 8 0 0 0
+HAL: c5471_mdtxbit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_ethernet.c:470:3 9 0 0 0
+HAL: c5471_mdrxbit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_ethernet.c:535:3 7 0 0 0
+HAL: c5471_interrupt_work /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_ethernet.c:1586:23 3 0 0 0
+HAL: c5471_inctxcpu /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_ethernet.c:815:27 4 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_timerisr.c:101:3 5 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_irq.c:149:3 3 0 0 0
+HAL: up_ackirq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_irq.c:99:9 6 0 0 0
+HAL: up_ackfiq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_irq.c:117:9 3 0 0 0
+HAL: up_disable_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_irq.c:188:22 15 0 0 0
+HAL: up_enable_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_irq.c:205:22 11 0 0 0
+HAL: arm_ack_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/c5471_irq.c:226:9 4 0 0 0
+HAL: board_autoled_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/c5471/c5471evm/src/c5471_leds.c:62:7 2 0 0 0
+HAL: board_autoled_on /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/c5471/c5471evm/src/c5471_leds.c:79:19 34 0 0 0
+HAL: board_autoled_off /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/c5471/c5471evm/src/c5471_leds.c:92:19 9 0 0 0
+-------------------------------------------------
+

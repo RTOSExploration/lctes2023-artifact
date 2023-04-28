@@ -1,0 +1,17 @@
+# of Node vs. Analysis time: 313 9
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 4)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: diskbios_sync /src/plo/devices/disk-bios/disk-bios.c:318:55 3 1 0 0
+HAL: diskbios_read /src/plo/devices/disk-bios/disk-bios.c:235:39 2 1 0 0
+HAL: diskbios_write /src/plo/devices/disk-bios/disk-bios.c:273:56 3 1 0 0
+HAL: interrupts_setIDTEntry /src/plo/hal/ia32/interrupts.c:129:9 6 1 0 0
+-------------------------------------------------
+

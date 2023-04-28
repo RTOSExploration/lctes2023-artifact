@@ -1,0 +1,69 @@
+# of Node vs. Analysis time: 1733 162
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 56)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: s32k3xx_cgm_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:954:3 11 0 0 0
+HAL: s32k3xx_mscm_peripheral /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:457:13 14 0 0 0
+HAL: s32k3xx_pll_peripheral /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:517:13 15 0 0 0
+HAL: s32k3xx_mux_0_clocktransition /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:277:3 14 0 0 0
+HAL: s32k3xx_pll_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:602:12 15 0 0 0
+HAL: s32k3xx_get_scs_clk_source /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:75:12 38 0 0 0
+HAL: s32k3xx_scs_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:0 11 0 0 0
+HAL: s32k3xx_clkout_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:918:7 11 0 0 0
+HAL: s32k3xx_fxosc_peripheral /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:391:13 16 0 0 0
+HAL: s32k3xx_get_freq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:1084:20 37 0 0 0
+HAL: s32k3xx_get_sircfreq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:126:8 37 0 0 0
+HAL: s32k3xx_get_fircfreq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:152:8 40 0 0 0
+HAL: s32k3xx_get_phi0freq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:230:12 37 0 0 0
+HAL: s32k3xx_get_fxoscfreq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:98:8 37 0 0 0
+HAL: s32k3xx_get_pllfreq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clockconfig.c:188:8 37 0 0 0
+HAL: s32k3xx_periphclocks /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_periphclocks.c:150:3 9 0 0 0
+HAL: up_enable_icache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:129:3 7 0 0 0
+HAL: up_disable_icache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:166:13 2 0 0 0
+HAL: up_invalidate_icache_all /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:201:3 3 0 0 0
+HAL: up_enable_dcache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:235:12 6 0 0 0
+HAL: up_disable_dcache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:315:12 3 0 0 0
+HAL: up_invalidate_dcache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:394:12 13 0 0 0
+HAL: up_invalidate_dcache_all /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:468:12 4 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_irq.c:359:3 9 0 0 0
+HAL: s32k3xx_clrpend /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_clrpend.c:63:11 4 0 0 0
+HAL: s32k3xx_pinirq_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_pinirq.c:218:3 10 0 0 0
+HAL: s32k3xx_eirqinterrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_pinirq.c:100:12 4 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 0 0 0
+HAL: s32k3xx_netinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:2945:12 11 0 0 0
+HAL: s32k3xx_enet_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:1783:11 2 0 0 0
+HAL: s32k3xx_transmit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:763:3 10 0 0 0
+HAL: s32k3xx_disableint /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:1006:13 11 0 0 0
+HAL: s32k3xx_enableint /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:977:13 13 0 0 0
+HAL: s32k3xx_ifup_action /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:1935:3 6 0 0 0
+HAL: s32k3xx_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:2885:3 19 0 0 0
+HAL: s32k3xx_initbuffers /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:2737:3 7 0 0 0
+HAL: s32k3xx_initdma /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:2828:3 7 0 0 0
+HAL: s32k3xx_initmtl /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:2633:3 7 0 0 0
+HAL: s32k3xx_interrupt_work /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:1681:11 3 0 0 0
+HAL: s32k3xx_freesegment /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_emac.c:1102:7 7 0 0 0
+HAL: s32k3xx_qspi_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:1765:17 14 0 0 0
+HAL: qspi_hw_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:1448:13 17 0 0 0
+HAL: qspi_resetregisters /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:263:3 17 0 0 0
+HAL: qspi_setmemmapsizea /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:1424:3 17 0 0 0
+HAL: qspi_transmit_blocking /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:895:13 4 0 0 0
+HAL: qspi_receive_blocking /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:698:17 4 0 0 0
+HAL: qspi_setlut_read /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:625:3 4 0 0 0
+HAL: qspi_isbusy /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:317:11 7 0 0 0
+HAL: qspi_setlut_write /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:839:3 4 0 0 0
+HAL: qspi_ipwrite /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:338:3 4 0 0 0
+HAL: qspi_ipread /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:401:12 5 0 0 0
+HAL: qspi_rxfill /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:327:11 5 0 0 0
+HAL: qspi_rxdataevent /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:322:11 5 0 0 0
+HAL: qspi_setluttype1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:442:3 8 0 0 0
+HAL: qspi_setluttype2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_qspi.c:471:3 6 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/s32k3xx_timerisr.c:105:3 11 0 0 0
+-------------------------------------------------
+

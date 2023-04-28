@@ -1,0 +1,114 @@
+# of Node vs. Analysis time: 1124 141
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 101)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: nvmc_wait /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/system_nrf52.c:74:22 7 0 0 0
+HAL: nvmc_config /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/system_nrf52.c:81:22 5 0 0 0
+HAL: SystemInit /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/system_nrf52.c:148:36 5 0 0 0
+HAL: nrf52_errata_36 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:1833:29 5 0 0 0
+HAL: nrf52_errata_66 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:3159:29 6 0 0 0
+HAL: nrf52_errata_98 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:5137:29 5 0 0 0
+HAL: nrf52_errata_103 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:5299:29 5 0 0 0
+HAL: nrf52_errata_115 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:5845:29 16 0 0 0
+HAL: nrf52_errata_120 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:6075:29 8 0 0 0
+HAL: nrf52_errata_136 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:6574:29 9 0 0 0
+HAL: nrf52_handle_approtect /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/system_nrf52_approtect.h:55:52 8 0 0 0
+HAL: __NVIC_SystemReset.233 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/core_cm4.h:1943:34 10 0 0 0
+HAL: nrf52_configuration_249 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/mdk/nrf52_erratas.h:13010:29 10 0 0 0
+HAL: region_init /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/mpu/arm_mpu_v7_internal.h:47:12 12 0 0 0
+HAL: set_region_number /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/mpu/cortex_m/arm_mpu_internal.h:34:11 12 0 0 0
+HAL: ARM_MPU_ClrRegion /home/mjshen/RTOSExploration/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/mpu_armv7.h:220:12 10 0 0 0
+HAL: z_arm_mpu_init /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/mpu/arm_mpu.c:433:2 6 0 0 0
+HAL: nordicsemi_nrf52_init /home/mjshen/RTOSExploration/zephyrproject/zephyr/soc/arm/nordic_nrf/nrf52/soc.c:68:22 3 1 0 0
+HAL: nrf_power_dcdcen_set /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_power.h:1116:19 4 0 0 0
+HAL: nrf_power_gpregret_set /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_power.h:1062:17 6 0 0 0
+HAL: __NVIC_SystemReset /home/mjshen/RTOSExploration/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/core_cm4.h:1943:34 4 0 0 0
+HAL: nrf_power_system_off /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_power.h:985:22 9 0 0 0
+HAL: nrf_clock_lf_src_set.265 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:851:21 13 0 0 0
+HAL: nrf_clock_int_disable.266 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:712:21 15 0 0 0
+HAL: nrf_clock_event_clear.268 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:739:46 15 0 0 0
+HAL: nrf_clock_task_trigger.269 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:728:46 16 0 0 0
+HAL: nrf_clock_is_running.271 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:796:49 22 0 0 0
+HAL: nrf_clock_start_task_check /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:754:29 14 0 0 0
+HAL: nrf_clock_lf_srccopy_get.276 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:868:40 12 0 0 0
+HAL: nrf_clock_int_enable.277 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:707:21 11 0 0 0
+HAL: nrf_clock_event_check.282 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:745:59 4 0 0 0
+HAL: nrf_gpiote_te_default /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:617:5 22 0 0 0
+HAL: __NVIC_EnableIRQ /home/mjshen/RTOSExploration/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/core_cm4.h:1689:5 9 0 0 0
+HAL: __NVIC_DisableIRQ /home/mjshen/RTOSExploration/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/core_cm4.h:1726:5 6 0 0 0
+HAL: arch_irq_is_enabled /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/irq_manage.c:52:9 9 0 0 0
+HAL: __NVIC_SetPriority /home/mjshen/RTOSExploration/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/core_cm4.h:1816:7 7 0 0 0
+HAL: relocate_vector_table /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/prep_c.c:55:12 6 0 0 0
+HAL: nrf_clock_event_check /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:745:18 4 0 0 0
+HAL: nrf_clock_event_clear /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:739:66 6 0 0 0
+HAL: nrf_clock_lf_src_set /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:851:21 4 0 0 0
+HAL: __NVIC_ClearPendingIRQ /home/mjshen/RTOSExploration/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/core_cm4.h:1779:43 5 0 0 0
+HAL: nrf_clock_task_trigger /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:728:65 4 0 0 0
+HAL: nrf_clock_int_enable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:707:21 6 0 0 0
+HAL: nrf_event_readback /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_common.h:66:11 6 0 0 0
+HAL: nrf_uart_configure /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_uart.h:521:19 6 0 0 0
+HAL: nrf_uart_baudrate_set /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_uart.h:533:21 5 0 0 0
+HAL: nrf_uart_errorsrc_get_and_clear /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_uart.h:403:35 7 0 0 0
+HAL: nrf_uart_task_trigger /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_uart.h:509:46 5 0 0 0
+HAL: z_arm_floating_point_init /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/prep_c.c:103:13 4 0 0 0
+HAL: arch_swap /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/swap.c:41:12 226 0 0 0
+HAL: z_arm_fault /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/fault.c:1040:19 4 0 0 0
+HAL: hard_fault /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/fault.c:734:12 5 0 0 0
+HAL: mem_manage_fault /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/fault.c:237:12 5 0 0 0
+HAL: bus_fault /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/fault.c:389:11 5 0 0 0
+HAL: usage_fault /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/fault.c:546:12 6 0 0 0
+HAL: z_arm_is_synchronous_svc /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/fault.c:682:11 5 0 0 0
+HAL: z_arm_fault_init /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/fault.c:1111:11 7 0 0 0
+HAL: __NVIC_SetPriority.114 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/core_cm4.h:1816:7 10 0 0 0
+HAL: z_impl_k_thread_abort /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/cortex_m/thread_abort.c:42:14 16 0 0 0
+HAL: arm_core_mpu_enable /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/mpu/arm_mpu.c:188:12 10 0 0 0
+HAL: arm_core_mpu_disable /home/mjshen/RTOSExploration/zephyrproject/zephyr/arch/arm/core/aarch32/mpu/arm_mpu.c:205:12 6 0 0 0
+HAL: nrf_clock_is_running /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:796:49 9 0 0 0
+HAL: nrf_clock_lf_srccopy_get /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:868:40 6 0 0 0
+HAL: nrf_clock_int_disable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:712:21 5 0 0 0
+HAL: nrf_clock_lf_src_get /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_clock.h:856:39 4 0 0 0
+HAL: nrf_uart_txd_set /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_uart.h:504:16 3 0 0 0
+HAL: nrf_uart_event_check /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_uart.h:377:58 6 0 0 0
+HAL: nrf_uart_event_clear /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_uart.h:371:46 8 0 0 0
+HAL: nrf_uart_rxd_get /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_uart.h:499:19 3 0 0 0
+HAL: nrf_uart_disable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_uart.h:415:19 4 0 0 0
+HAL: nrf_uart_enable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_uart.h:410:19 9 0 0 0
+HAL: nrf_rtc_int_enable_check /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_rtc.h:334:19 8 0 0 0
+HAL: nrf_rtc_event_check /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_rtc.h:369:58 7 0 0 0
+HAL: nrf_rtc_event_clear /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_rtc.h:374:46 183 0 0 0
+HAL: nrf_rtc_event_disable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_rtc.h:418:21 7 0 0 0
+HAL: nrf_rtc_counter_get /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_rtc.h:380:20 186 0 0 0
+HAL: nrf_rtc_prescaler_set /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_rtc.h:386:22 7 0 0 0
+HAL: nrf_rtc_int_enable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_rtc.h:324:21 183 0 0 0
+HAL: __NVIC_ClearPendingIRQ.211 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/core_cm4.h:1779:43 8 0 0 0
+HAL: __NVIC_SetPendingIRQ /home/mjshen/RTOSExploration/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/core_cm4.h:1764:43 183 0 0 0
+HAL: nrf_rtc_event_enable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_rtc.h:413:21 183 0 0 0
+HAL: nrf_rtc_cc_set /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_rtc.h:314:5 183 0 0 0
+HAL: nrf_rtc_cc_get /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_rtc.h:319:12 183 0 0 0
+HAL: nrf_rtc_int_disable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_rtc.h:329:21 183 0 0 0
+HAL: nrf_gpiote_int_disable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:501:21 13 0 0 0
+HAL: nrf_gpiote_event_disable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:544:4 15 0 0 0
+HAL: nrf_gpiote_event_configure /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:552:3 8 0 0 0
+HAL: nrf_gpiote_task_configure /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:598:3 11 0 0 0
+HAL: nrf_gpiote_int_enable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:496:21 5 0 0 0
+HAL: nrf_gpiote_task_enable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:571:29 4 0 0 0
+HAL: nrf_gpiote_task_disable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:589:5 4 0 0 0
+HAL: nrf_gpiote_set_task_get /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:638:31 6 0 0 0
+HAL: nrf_gpiote_clr_task_get /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:646:31 12 0 0 0
+HAL: nrf_gpiote_task_force /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:611:27 4 0 0 0
+HAL: nrf_gpiote_in_event_get /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:653:32 7 0 0 0
+HAL: nrf_gpiote_event_enable /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:539:4 4 0 0 0
+HAL: nrf_gpiote_event_check /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:479:58 6 0 0 0
+HAL: nrf_gpiote_int_enable_check /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:506:19 6 0 0 0
+HAL: nrf_gpiote_event_pin_get /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:559:14 5 0 0 0
+HAL: nrf_gpiote_event_polarity_get /home/mjshen/RTOSExploration/zephyrproject/modules/hal/nordic/nrfx/hal/nrf_gpiote.h:565:37 8 0 0 0
+HAL: __NVIC_SetPriority.357 /home/mjshen/RTOSExploration/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include/core_cm4.h:1822:5 9 0 0 0
+-------------------------------------------------
+

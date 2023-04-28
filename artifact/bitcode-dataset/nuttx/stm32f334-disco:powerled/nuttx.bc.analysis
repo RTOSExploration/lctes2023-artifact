@@ -1,0 +1,24 @@
+# of Node vs. Analysis time: 734 31
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 11)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: rcc_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f33xxx_rcc.c:75:3 6 0 0 0
+HAL: stm32_stdclockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f33xxx_rcc.c:368:17 5 0 0 0
+HAL: rcc_enableahb /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f33xxx_rcc.c:162:3 7 0 0 0
+HAL: rcc_enableapb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f33xxx_rcc.c:284:12 8 0 0 0
+HAL: rcc_enableapb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f33xxx_rcc.c:181:13 7 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_lowputc.c:399:11 4 0 0 0
+HAL: stm32_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_lowputc.c:608:9 3 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_irq.c:314:7 4 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 1 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_timerisr.c:116:12 6 0 0 0
+HAL: dac_blockinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_dac.c:1668:13 13 0 0 0
+-------------------------------------------------
+

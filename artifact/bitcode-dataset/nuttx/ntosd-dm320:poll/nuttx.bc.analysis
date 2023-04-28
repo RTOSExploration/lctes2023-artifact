@@ -1,0 +1,36 @@
+# of Node vs. Analysis time: 886 52
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 23)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: arm_decodeirq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/dm320_decodeirq.c:51:23 2 0 0 0
+HAL: up_setlevel2coarseentry /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/dm320_boot.c:117:3 3 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/dm320_irq.c:76:3 5 0 0 0
+HAL: up_disable_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/dm320_irq.c:132:7 15 0 0 0
+HAL: up_enable_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/dm320_irq.c:175:7 8 0 0 0
+HAL: arm_ack_irq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/dm320_irq.c:216:7 3 0 0 0
+HAL: arm_netinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/dm320/ntosd-dm320/src/dm320_network.c:60:3 6 1 0 0
+HAL: getreg /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:426:14 15 0 0 0
+HAL: dm9x_transmit /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:731:18 7 0 0 0
+HAL: putreg /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:432:14 28 0 0 0
+HAL: dm9x_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:1788:19 6 0 0 0
+HAL: read32 /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:480:18 2 0 0 0
+HAL: read16 /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:469:18 4 0 0 0
+HAL: read8 /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:458:16 2 0 0 0
+HAL: write32 /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:575:17 3 0 0 0
+HAL: write16 /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:563:18 2 0 0 0
+HAL: write8 /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:551:17 5 0 0 0
+HAL: discard32 /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:524:7 2 0 0 0
+HAL: discard16 /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:515:7 4 0 0 0
+HAL: discard8 /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:506:7 3 0 0 0
+HAL: dm9x_interrupt_work /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:1139:19 3 0 0 0
+HAL: dm9x_receive /home/mjshen/RTOSExploration/nuttxspace/nuttx/drivers/net/dm90x0.c:872:25 3 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/dm320_timerisr.c:124:3 4 0 0 0
+-------------------------------------------------
+

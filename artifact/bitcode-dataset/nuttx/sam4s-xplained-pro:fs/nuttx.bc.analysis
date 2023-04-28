@@ -1,0 +1,65 @@
+# of Node vs. Analysis time: 1244 102
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 52)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: sam_efcsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_clockconfig.c:97:3 3 0 0 0
+HAL: sam_supcsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_clockconfig.c:133:8 4 0 0 0
+HAL: sam_pmcsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_clockconfig.c:176:8 3 0 0 0
+HAL: sam_enabledefaultmaster /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_clockconfig.c:296:13 3 0 0 0
+HAL: sam_pmcwait /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_clockconfig.c:158:9 5 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_lowputc.c:273:15 9 0 0 0
+HAL: sam_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_lowputc.c:336:3 3 0 0 0
+HAL: sam_gpio_enableclk /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_gpio.c:0 21 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_irq.c:372:16 5 0 0 0
+HAL: sam_prioritize_syscall /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_irq.c:243:13 5 0 0 0
+HAL: sam_gpioirqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_gpioirq.c:300:3 7 0 0 0
+HAL: sam_gpiointerrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_gpioirq.c:183:13 3 0 0 0
+HAL: sam_gpioirq /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_gpioirq.c:387:7 9 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 4 1 0 0
+HAL: arm_memfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_memfault.c:63:19 2 1 0 0
+HAL: sam_reset.1706 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:1408:3 2 0 0 0
+HAL: sam_widebus /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:1549:13 2 0 0 0
+HAL: sam_clock /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:1581:12 3 0 0 0
+HAL: sam_attach /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:1663:7 2 0 0 0
+HAL: sam_sendcmd /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:1703:3 1 0 0 0
+HAL: sam_blocksetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:1850:12 2 0 0 0
+HAL: sam_dmarecvsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:2530:3 2 0 0 0
+HAL: sam_dmasendsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:2600:3 2 0 0 0
+HAL: sam_cancel /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:1903:3 1 0 0 0
+HAL: sam_waitresponse /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:1983:17 2 0 0 0
+HAL: sam_recvshort /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:2142:17 2 0 0 0
+HAL: sam_recvlong /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:2193:18 2 0 0 0
+HAL: sam_waitenable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:2276:3 1 0 0 0
+HAL: sam_enableints /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:719:3 4 0 0 0
+HAL: sam_disablexfrints /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:696:3 7 0 0 0
+HAL: sam_disablewaitints /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:649:3 8 0 0 0
+HAL: sam_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:1275:17 2 0 0 0
+HAL: sam_endtransfer /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:1193:3 3 0 0 0
+HAL: sam_enable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_hsmci.c:757:3 4 0 0 0
+HAL: sam_ep0_read /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_udp.c:1235:28 3 0 0 0
+HAL: sam_ep0_wrstatus /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_udp.c:1256:13 6 0 0 0
+HAL: sam_enableclks /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_udp.c:3725:3 22 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_timerisr.c:126:12 3 0 0 0
+HAL: up_rtc_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_rtc.c:345:3 3 0 0 0
+HAL: rtc_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_rtc.c:269:3 3 0 0 0
+HAL: rtc_sync /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_rtc.c:298:12 3 0 0 0
+HAL: up_rtc_getdatetime /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_rtc.c:450:15 1 0 0 0
+HAL: up_rtc_settime /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_rtc.c:586:13 6 0 0 0
+HAL: sam_rtc_setalarm /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_rtc.c:664:7 2 0 0 0
+HAL: up_rtc_gettime /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_rtc.c:767:17 28 0 0 0
+HAL: sam_wdtinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_wdt.c:662:3 9 0 0 0
+HAL: sam34_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_wdt.c:258:12 3 0 0 0
+HAL: sam34_start /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_wdt.c:319:3 2 0 0 0
+HAL: sam34_keepalive /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_wdt.c:374:3 2 0 0 0
+HAL: sam34_getstatus /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_wdt.c:424:15 2 0 0 0
+HAL: sam_disableclks /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/sam_udp.c:3752:13 20 0 0 0
+HAL: board_nandflash_config /home/mjshen/RTOSExploration/nuttxspace/nuttx/boards/arm/sam34/sam4s-xplained-pro/src/sam_nandflash.c:114:3 8 1 0 0
+-------------------------------------------------
+

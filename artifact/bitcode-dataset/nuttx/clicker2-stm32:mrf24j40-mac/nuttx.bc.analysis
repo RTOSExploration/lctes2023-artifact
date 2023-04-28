@@ -1,0 +1,32 @@
+# of Node vs. Analysis time: 1176 68
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 19)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 3 1 0 0
+HAL: rcc_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:183:12 4 0 0 0
+HAL: stm32_stdclockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:749:13 5 0 0 0
+HAL: rcc_enableahb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:228:12 5 0 0 0
+HAL: rcc_enableahb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:348:12 5 0 0 0
+HAL: rcc_enableapb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:426:12 5 0 0 0
+HAL: rcc_enableapb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:597:12 5 0 0 0
+HAL: stm32_iocompensation /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_gpio.c:859:3 3 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_lowputc.c:399:11 5 0 0 0
+HAL: stm32_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_lowputc.c:608:9 3 0 0 0
+HAL: arm_fpuconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_fpuconfig.c:74:12 4 1 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_irq.c:314:7 10 0 0 0
+HAL: stm32_exti1_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:94:3 2 0 0 0
+HAL: stm32_exti2_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:115:3 3 0 0 0
+HAL: stm32_exti3_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:136:3 4 0 0 0
+HAL: stm32_exti4_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:157:3 2 0 0 0
+HAL: stm32_exti0_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:73:3 2 0 0 0
+HAL: stm32_exti_multiisr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:181:8 4 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_timerisr.c:116:12 10 0 0 0
+-------------------------------------------------
+

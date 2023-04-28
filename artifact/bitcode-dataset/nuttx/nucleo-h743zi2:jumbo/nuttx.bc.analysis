@@ -1,0 +1,83 @@
+# of Node vs. Analysis time: 2567 294
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 70)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: stm32_tcmenable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_start.c:132:13 4 0 0 0
+HAL: stm32_stdclockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32h7x3xx_rcc.c:631:13 3 0 0 0
+HAL: rcc_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32h7x3xx_rcc.c:127:12 3 0 0 0
+HAL: rcc_enableahb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32h7x3xx_rcc.c:188:12 7 0 0 0
+HAL: rcc_enableahb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32h7x3xx_rcc.c:251:12 8 0 0 0
+HAL: rcc_enableahb3 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32h7x3xx_rcc.c:284:12 4 0 0 0
+HAL: rcc_enableahb4 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32h7x3xx_rcc.c:325:12 4 0 0 0
+HAL: rcc_enableapb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32h7x3xx_rcc.c:407:12 4 0 0 0
+HAL: rcc_enableapb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32h7x3xx_rcc.c:468:12 5 0 0 0
+HAL: rcc_enableapb3 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32h7x3xx_rcc.c:519:12 4 0 0 0
+HAL: rcc_enableapb4 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32h7x3xx_rcc.c:542:12 3 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_lowputc.c:326:11 5 0 0 0
+HAL: stm32_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_lowputc.c:392:9 4 0 0 0
+HAL: up_enable_icache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:129:3 3 1 0 0
+HAL: up_disable_icache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:166:13 2 1 0 0
+HAL: up_invalidate_icache_all /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:201:3 3 1 0 0
+HAL: up_enable_dcache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:235:12 4 1 0 0
+HAL: up_disable_dcache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:315:12 2 1 0 0
+HAL: up_invalidate_dcache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:394:12 7 1 0 0
+HAL: up_invalidate_dcache_all /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:468:12 4 1 0 0
+HAL: arm_fpuconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_fpuconfig.c:74:12 4 1 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_irq.c:434:16 8 0 0 0
+HAL: stm32_busfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_irq.c:202:3 3 0 0 0
+HAL: stm32_usagefault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_irq.c:210:3 3 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 1 0 0
+HAL: arm_memfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_memfault.c:63:19 3 1 0 0
+HAL: up_perf_init /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_perf.c:55:3 5 1 0 0
+HAL: up_perf_gettime /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_perf.c:66:10 5 1 0 0
+HAL: stm32_addmac /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:2720:11 3 0 0 0
+HAL: stm32_rmmac /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:2779:7 2 0 0 0
+HAL: stm32_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:2350:11 3 0 0 0
+HAL: stm32_interrupt_work /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:2250:11 2 0 0 0
+HAL: stm32_disableint /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:1532:13 5 0 0 0
+HAL: stm32_transmit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:1290:3 5 0 0 0
+HAL: stm32_enableint /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:1504:13 6 0 0 0
+HAL: stm32_freesegment /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:1629:7 6 0 0 0
+HAL: stm32_selectrmii /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:3623:13 12 0 0 0
+HAL: stm32_ethreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:3804:13 17 0 0 0
+HAL: stm32_txdescinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:2869:3 6 0 0 0
+HAL: stm32_rxdescinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:2955:3 5 0 0 0
+HAL: stm32_phyinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:3367:13 6 0 0 0
+HAL: stm32_macconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:3874:13 4 0 0 0
+HAL: stm32_macenable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:4115:13 6 0 0 0
+HAL: stm32_macaddress /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:3999:3 7 0 0 0
+HAL: stm32_phywrite /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:3175:13 7 0 0 0
+HAL: stm32_phyread /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_ethernet.c:3114:13 7 0 0 0
+HAL: stm32_get_uniqueid /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_uid.c:59:53 12 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_timerisr.c:140:3 10 0 0 0
+HAL: stm32_otgfshost_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:5456:12 5 0 0 0
+HAL: stm32_gint_disable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3711:13 7 0 0 0
+HAL: stm32_hw_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:5343:12 7 0 0 0
+HAL: stm32_gint_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3595:18 3 0 0 0
+HAL: stm32_gint_enable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3700:13 6 0 0 0
+HAL: stm32_rh_enumerate /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3998:12 7 0 0 0
+HAL: stm32_portreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:4993:13 19 0 0 0
+HAL: stm32_gint_rxflvlisr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3079:13 7 0 0 0
+HAL: stm32_gint_nptxfeisr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3203:12 3 0 0 0
+HAL: stm32_gint_ptxfeisr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3293:12 3 0 0 0
+HAL: stm32_gint_hcisr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3356:11 3 0 0 0
+HAL: stm32_gint_hprtisr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3403:10 3 0 0 0
+HAL: stm32_gint_discisr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3534:3 5 0 0 0
+HAL: stm32_gint_ipxfrisr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3553:12 5 0 0 0
+HAL: stm32_transfer_start /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:1507:8 22 0 0 0
+HAL: stm32_txfe_enable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3823:12 22 0 0 0
+HAL: stm32_host_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:5155:3 8 0 0 0
+HAL: stm32_flush_txfifos /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:5029:3 11 0 0 0
+HAL: stm32_flush_rxfifo /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:5068:3 11 0 0 0
+HAL: stm32_vbusdrive /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:5111:12 8 0 0 0
+HAL: stm32_hostinit_enable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otghost.c:3736:3 8 0 0 0
+HAL: up_systemreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_systemreset.c:55:13 6 1 0 0
+-------------------------------------------------
+

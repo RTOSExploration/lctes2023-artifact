@@ -1,0 +1,23 @@
+# of Node vs. Analysis time: 2080 166
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 10)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: tiva_clock_reconfigure /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/lm4xx_tm3c_sysctrl.c:189:10 4 1 0 0
+HAL: tiva_pll_lock /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/lm4xx_tm3c_sysctrl.c:151:12 6 1 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_lowputc.c:221:11 2 1 0 0
+HAL: tiva_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_lowputc.c:392:9 2 1 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_irq.c:419:16 4 1 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 1 0 0
+HAL: arm_memfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_memfault.c:63:19 1 1 0 0
+HAL: tiva_ethinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/lm/lm3s_ethernet.c:1600:3 5 1 0 0
+HAL: tiva_ethreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/lm/lm3s_ethernet.c:353:13 8 1 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/tiva/common/tiva_timerisr.c:101:12 4 1 0 0
+-------------------------------------------------
+

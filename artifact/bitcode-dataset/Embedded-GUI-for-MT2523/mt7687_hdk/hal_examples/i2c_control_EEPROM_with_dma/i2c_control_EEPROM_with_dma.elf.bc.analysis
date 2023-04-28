@@ -1,0 +1,53 @@
+# of Node vs. Analysis time: 273 35
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 3)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+Non-HAL: SysTick_Set /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/project/mt7687_hdk/hal_examples/i2c_control_EEPROM_with_dma/src/system_mt7687.c:78:20 9 1 1 0
+Non-HAL: SystemInit /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/project/mt7687_hdk/hal_examples/i2c_control_EEPROM_with_dma/src/system_mt7687.c:140:16 2 1 1 0
+Non-HAL: CachePreInit /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/project/mt7687_hdk/hal_examples/i2c_control_EEPROM_with_dma/src/system_mt7687.c:161:22 1 1 1 0
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 37)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: DMA_Config_Internal /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/dma.c:186:9 4 0 0 0
+HAL: DMA_Clock_Enable /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/dma.c:914:51 16 0 0 0
+HAL: halGPIO_ConfDirection /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/hal_gpio_7687.c:67:66 9 0 0 0
+HAL: halGPO_Write /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/hal_gpio_7687.c:146:17 2 0 0 0
+HAL: halUART_Get_VFIFO_Length /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/uart.c:219:23 12 0 0 0
+HAL: halUART_Write_VFIFO_Data /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/uart.c:256:59 3 0 0 0
+HAL: NVIC_EnableIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1497:3 23 0 0 0
+HAL: DMA_LISR /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/dma.c:553:20 2 0 0 0
+HAL: DMA_Clock_Disable /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/dma.c:919:51 4 0 0 0
+HAL: DMA_Vfifo_init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/dma.c:804:5 3 0 0 0
+HAL: GPT_ResetTimer /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/gpt.c:78:30 4 0 0 0
+HAL: GPT_Start /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/gpt.c:99:30 3 0 0 0
+HAL: GPT_Stop /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/gpt.c:113:30 5 0 0 0
+HAL: GPT_INT_Handler /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/gpt.c:135:18 2 0 0 0
+HAL: GPT_init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/gpt.c:159:30 17 0 0 0
+HAL: getc_nowait /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/uart.c:84:9 3 0 0 0
+HAL: halGPIO_PullUp_SET /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/hal_gpio_7687.c:242:17 2 0 0 0
+HAL: halGPIO_PullDown_RESET /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/hal_gpio_7687.c:370:17 3 0 0 0
+HAL: halGPIO_PullUp_RESET /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/hal_gpio_7687.c:284:17 4 0 0 0
+HAL: halGPIO_PullDown_SET /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/hal_gpio_7687.c:326:17 2 0 0 0
+HAL: halGPIO_SetDriving /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/hal_gpio_7687.c:413:61 2 0 0 0
+HAL: halGPIO_GetDriving /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/hal_gpio_7687.c:473:20 2 0 0 0
+HAL: topPAD_Control_GPIO /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/hal_gpio_7687.c:538:47 2 0 0 0
+HAL: halPinmuxTopOnPadFunc /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/hal_pinmux.c:91:20 7 0 0 0
+HAL: NVIC_SetupVectorTable /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/nvic.c:49:15 1 0 0 0
+HAL: NVIC_SWInt /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/nvic.c:58:16 2 0 0 0
+HAL: drvTMR_init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/timer.c:139:30 3 0 0 0
+HAL: clear_TMR_INT_status_bit /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/timer.c:0 2 0 0 0
+HAL: top_xtal_init /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/common/top.c:55:25 5 0 0 0
+HAL: NVIC_DisableIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1509:3 6 0 0 0
+HAL: NVIC_GetPendingIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1525:23 2 0 0 0
+HAL: NVIC_SetPendingIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1537:3 2 0 0 0
+HAL: NVIC_ClearPendingIRQ /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1549:3 23 0 0 0
+HAL: NVIC_SetPriority /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1582:5 23 0 0 0
+HAL: NVIC_GetPriority /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/CMSIS/Include/core_cm4.h:1603:23 3 0 0 0
+HAL: get_current_irq /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/hal_nvic.c:168:31 2 1 0 0
+HAL: get_pending_irq /home/mjshen/RTOSExploration/Embedded-GUI-for-MT2523/driver/chip/mt7687/src/hal_nvic.c:57:19 3 1 0 0
+-------------------------------------------------
+

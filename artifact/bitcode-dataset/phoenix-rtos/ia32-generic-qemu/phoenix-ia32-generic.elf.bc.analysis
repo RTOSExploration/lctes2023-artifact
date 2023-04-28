@@ -1,0 +1,15 @@
+# of Node vs. Analysis time: 793 28
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 2)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: _cpu_initCore /src/phoenix-rtos-kernel/hal/ia32/cpu.c:414:10 6 1 0 0
+HAL: _pmap_init /src/phoenix-rtos-kernel/hal/ia32/pmap.c:451:22 4 1 0 0
+-------------------------------------------------
+

@@ -1,0 +1,59 @@
+# of Node vs. Analysis time: 1846 165
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 46)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: stm32_exti1_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:94:3 1 0 0 0
+HAL: stm32_exti2_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:115:3 2 0 0 0
+HAL: stm32_exti3_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:136:3 1 0 0 0
+HAL: stm32_exti4_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:157:3 1 0 0 0
+HAL: stm32_exti0_isr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:73:3 1 0 0 0
+HAL: stm32_exti_multiisr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_exti_gpio.c:181:8 4 0 0 0
+HAL: rcc_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:183:12 4 0 0 0
+HAL: stm32_stdclockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:749:13 5 0 0 0
+HAL: rcc_enableahb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:228:12 8 0 0 0
+HAL: rcc_enableahb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:348:12 11 0 0 0
+HAL: rcc_enableapb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:426:12 9 0 0 0
+HAL: rcc_enableapb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f40xxx_rcc.c:597:12 10 0 0 0
+HAL: stm32_iocompensation /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_gpio.c:859:3 2 0 0 0
+HAL: arm_fpuconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_fpuconfig.c:74:12 3 1 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_irq.c:314:7 5 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 1 0 0
+HAL: arm_usbuninitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:5716:7 7 0 0 0
+HAL: stm32_usbinterrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:3683:17 1 0 0 0
+HAL: stm32_hwinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:5328:3 7 0 0 0
+HAL: stm32_pullup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:5096:12 30 0 0 0
+HAL: stm32_usbreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:2052:12 27 0 0 0
+HAL: stm32_txfifo_flush /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:5170:3 42 0 0 0
+HAL: stm32_setaddress /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:5133:12 36 0 0 0
+HAL: stm32_ep0out_ctrlsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:1064:3 45 0 0 0
+HAL: stm32_epin_configure /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:4114:12 27 0 0 0
+HAL: stm32_epout_configure /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:4014:12 27 0 0 0
+HAL: stm32_rxfifo_flush /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:5204:3 46 0 0 0
+HAL: stm32_epout_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:2720:13 3 0 0 0
+HAL: stm32_epin_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:2959:12 2 0 0 0
+HAL: stm32_resumeinterrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:3165:13 2 0 0 0
+HAL: stm32_rxinterrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:3254:16 2 0 0 0
+HAL: stm32_enuminterrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:3441:13 3 0 0 0
+HAL: stm32_ep0in_activate /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:1023:13 3 0 0 0
+HAL: stm32_rxfifo_read /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:1475:16 6 0 0 0
+HAL: stm32_ep0out_receive /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:1631:30 4 0 0 0
+HAL: stm32_rxfifo_discard /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:1511:36 4 0 0 0
+HAL: stm32_enablegonak /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:3877:12 17 0 0 0
+HAL: stm32_disablegonak /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:3917:13 15 0 0 0
+HAL: stm32_epin_transfer /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:1194:25 20 0 0 0
+HAL: stm32_epin_request /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:1389:29 9 0 0 0
+HAL: stm32_epin_runtestmode /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:2846:21 4 0 0 0
+HAL: stm32_epin_disable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:4342:13 4 0 0 0
+HAL: stm32_epout_disable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:4245:13 4 0 0 0
+HAL: stm32_getframe /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:5003:12 2 0 0 0
+HAL: stm32_wakeup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_otgfsdev.c:5030:16 3 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_timerisr.c:116:12 5 0 0 0
+-------------------------------------------------
+

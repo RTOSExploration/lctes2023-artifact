@@ -1,0 +1,6 @@
+HAL: _cpu_initCore /src/phoenix-rtos-kernel/hal/ia32/cpu.c:414:10 6 1 0 0
+HAL: diskbios_read /src/plo/devices/disk-bios/disk-bios.c:235:39 2 1 0 0
+HAL: diskbios_sync /src/plo/devices/disk-bios/disk-bios.c:318:55 3 1 0 0
+HAL: diskbios_write /src/plo/devices/disk-bios/disk-bios.c:273:56 3 1 0 0
+HAL: interrupts_setIDTEntry /src/plo/hal/ia32/interrupts.c:129:9 6 1 0 0
+HAL: _pmap_init /src/phoenix-rtos-kernel/hal/ia32/pmap.c:451:22 4 1 0 0

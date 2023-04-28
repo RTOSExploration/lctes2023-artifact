@@ -1,0 +1,48 @@
+# of Node vs. Analysis time: 1462 111
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 35)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: stm32_hwsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:3658:3 15 0 0 0
+HAL: stm32_hpinterrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:0 3 0 0 0
+HAL: stm32_lpinterrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:2504:19 4 0 0 0
+HAL: stm32_hwshutdown /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:3737:3 11 0 0 0
+HAL: stm32_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:3558:3 15 0 0 0
+HAL: stm32_hwreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:3610:3 30 0 0 0
+HAL: stm32_seteprxaddr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:879:43 62 0 0 0
+HAL: stm32_seteprxcount /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:820:43 43 0 0 0
+HAL: stm32_seteptxaddr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:800:43 35 0 0 0
+HAL: stm32_clrstatusout /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:959:13 31 0 0 0
+HAL: stm32_setdevaddr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:1720:3 33 0 0 0
+HAL: stm32_setimask /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:2611:13 30 0 0 0
+HAL: stm32_initresume /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:2690:12 7 0 0 0
+HAL: stm32_suspend /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:2641:3 5 0 0 0
+HAL: stm32_esofpoll /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:2725:24 7 0 0 0
+HAL: stm32_lptransfer /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:2426:19 5 0 0 0
+HAL: stm32_ep0done /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:2328:13 11 0 0 0
+HAL: stm32_geteptxaddr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:810:43 20 0 0 0
+HAL: stm32_seteptxcount /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:790:43 19 0 0 0
+HAL: stm32_geteprxaddr /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:889:43 13 0 0 0
+HAL: stm32_geteprxcount /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:869:43 15 0 0 0
+HAL: rcc_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f10xxx_rcc.c:75:3 4 0 0 0
+HAL: stm32_stdclockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f10xxx_rcc.c:642:17 4 0 0 0
+HAL: rcc_enableahb /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f10xxx_rcc.c:184:3 5 0 0 0
+HAL: rcc_enableapb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f10xxx_rcc.c:409:12 4 0 0 0
+HAL: rcc_enableapb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32f10xxx_rcc.c:205:13 5 0 0 0
+HAL: stm32_gpioremap /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_gpio.c:195:3 5 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_lowputc.c:399:11 9 0 0 0
+HAL: stm32_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_lowputc.c:445:10 4 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_irq.c:314:7 8 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 4 0 0 0
+HAL: stm32_getframe /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:3479:9 4 0 0 0
+HAL: stm32_wakeup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_usbdev.c:3517:3 4 0 0 0
+HAL: up_systemreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_systemreset.c:55:13 23 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32_timerisr.c:116:12 9 0 0 0
+-------------------------------------------------
+

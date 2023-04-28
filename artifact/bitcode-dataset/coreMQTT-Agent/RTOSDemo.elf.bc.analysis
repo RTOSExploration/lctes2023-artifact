@@ -1,0 +1,41 @@
+# of Node vs. Analysis time: 759 36
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 1)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+Non-HAL: _write /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/build/Cortex-M3_MPS2_QEMU_GCC/target-specific-source/startup.c:198:31 355 0 1 0
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 27)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: prvAddNewTaskToReadyList /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/tasks.c:1137:13 22 0 0 1
+HAL: vTaskDelete /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/tasks.c:1234:17 2 0 0 1
+HAL: xTaskDelayUntil /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/tasks.c:1320:13 3 0 0 1
+HAL: xTaskResumeAll /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/tasks.c:2302:21 355 0 0 1
+HAL: vTaskDelay /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/tasks.c:1367:13 9 0 0 1
+HAL: vTaskPrioritySet /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/tasks.c:1685:21 3 0 0 1
+HAL: vTaskSuspend /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/tasks.c:1779:17 2 0 0 1
+HAL: vTaskResume /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/tasks.c:1885:25 2 0 0 1
+HAL: xQueueReceive /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/queue.c:1369:25 7 0 0 1
+HAL: xQueuePeek /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/queue.c:1738:25 2 0 0 1
+HAL: ulTaskGenericNotifyTake /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/tasks.c:4718:21 3 0 0 1
+HAL: xTaskGenericNotifyWait /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/tasks.c:4797:21 6 0 0 1
+HAL: xTaskGenericNotify /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/tasks.c:4952:21 4 0 0 1
+HAL: xQueueGenericReset /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/queue.c:291:21 25 0 0 1
+HAL: xQueueGenericSend /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/queue.c:882:33 355 0 0 1
+HAL: xQueueSemaphoreTake /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/queue.c:1532:25 355 0 0 1
+HAL: prvProcessTimerOrBlockTask /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/timers.c:642:25 2 0 0 1
+HAL: xEventGroupSync /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/event_groups.c:259:13 2 0 0 1
+HAL: xEventGroupWaitBits /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/event_groups.c:411:13 24 0 0 1
+HAL: xPortStartScheduler /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/portable/GCC/ARM_CM3/port.c:279:34 4 0 0 0
+HAL: vPortSetupTimerInterrupt /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/portable/GCC/ARM_CM3/port.c:638:31 5 0 0 0
+HAL: vPortEnterCritical /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/portable/GCC/ARM_CM3/port.c:378:9 355 0 0 0
+HAL: xPortSysTickHandler /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/portable/GCC/ARM_CM3/port.c:445:35 2 0 0 0
+HAL: vPortValidateInterruptPriority /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-kernel/portable/GCC/ARM_CM3/port.c:661:33 27 0 0 0
+HAL: vGetMetrics /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-plus-tcp/tools/tcp_utilities/tcp_netstat.c:112:21 2 0 0 1
+HAL: EthernetISR /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-plus-tcp/portable/NetworkInterface/MPS2_AN385/NetworkInterface.c:216:5 3 1 0 0
+HAL: xNetworkInterfaceInitialise /home/mjshen/RTOSExploration/coreMQTT-Agent-Demos/lib/FreeRTOS/freertos-plus-tcp/portable/NetworkInterface/MPS2_AN385/NetworkInterface.c:251:25 3 1 0 0
+-------------------------------------------------
+

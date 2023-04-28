@@ -1,0 +1,60 @@
+# of Node vs. Analysis time: 1133 89
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 47)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: kinetis_wddisable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_wdog.c:86:13 3 0 0 0
+HAL: kinetis_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:1253:3 4 0 0 0
+HAL: kinetis_widebus /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:1379:12 3 0 0 0
+HAL: kinetis_clock /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:1613:13 4 0 0 0
+HAL: kinetis_attach /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:1721:7 3 0 0 0
+HAL: kinetis_sendcmd /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:1873:11 2 0 0 0
+HAL: kinetis_dmarecvsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:2697:3 3 0 0 0
+HAL: kinetis_dmasendsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:2754:3 2 0 0 0
+HAL: kinetis_cancel /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:2073:3 3 0 0 0
+HAL: kinetis_waitresponse /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:2157:11 2 0 0 0
+HAL: kinetis_recvshortcrc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:2259:16 3 0 0 0
+HAL: kinetis_recvlong /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:2309:16 3 0 0 0
+HAL: kinetis_recvshort /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:2378:16 3 0 0 0
+HAL: kinetis_configwaitints /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:470:3 11 0 0 0
+HAL: kinetis_configxfrints /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:496:3 7 0 0 0
+HAL: kinetis_datadisable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:737:13 5 0 0 0
+HAL: kinetis_wdunlock /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_wdog.c:59:3 3 0 0 0
+HAL: kinetis_mpudisable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_mpuinit.c:125:12 3 0 0 0
+HAL: kinetis_pllconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_clockconfig.c:216:3 4 0 0 0
+HAL: kinesis_setdividers /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_clockconfig.c:494:12 4 0 0 0
+HAL: kinesis_portclocks /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_clockconfig.c:164:12 5 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_lowputc.c:297:6 5 0 0 0
+HAL: kinetis_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_lowputc.c:338:12 3 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_irq.c:351:16 4 0 0 0
+HAL: kinetis_pinirqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_pinirq.c:246:3 6 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 1 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_timerisr.c:103:12 4 0 0 0
+HAL: arm_usbinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:4548:12 5 0 0 0
+HAL: khci_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:2892:11 2 0 0 0
+HAL: arm_usbuninitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:4634:12 7 0 0 0
+HAL: khci_hwinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:4385:12 7 0 0 0
+HAL: khci_hwreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:4334:8 18 0 0 0
+HAL: khci_hwshutdown /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:4488:3 15 0 0 0
+HAL: khci_resume /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:3223:13 18 0 0 0
+HAL: khci_ep0configure /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:3339:3 19 0 0 0
+HAL: khci_ep0stall /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:1816:12 3 0 0 0
+HAL: khci_ep0setup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:2528:12 6 0 0 0
+HAL: khci_ep0incomplete /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:2680:11 5 0 0 0
+HAL: khci_getframe /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:4099:14 2 0 0 0
+HAL: khci_remote_resume /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:3191:12 6 0 0 0
+HAL: khci_attach /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_usbdev.c:4203:7 14 0 0 0
+HAL: kinetis_clrpend /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_clrpend.c:73:11 20 0 0 0
+HAL: kinetis_dataconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:664:13 4 0 0 0
+HAL: kinetis_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:1087:13 2 0 0 0
+HAL: kinetis_endtransfer /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:1025:3 3 0 0 0
+HAL: sdhc_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_sdhc.c:2897:12 3 0 0 0
+HAL: pwm_setup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_pwm.c:560:12 2 0 0 0
+-------------------------------------------------
+

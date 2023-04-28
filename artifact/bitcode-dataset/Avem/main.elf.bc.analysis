@@ -1,0 +1,36 @@
+# of Node vs. Analysis time: 55 19
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 1)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+Non-HAL: Reset_Handler /home/mjshen/RTOSExploration/Avem/src/startup.c:245:12 2 1 1 0
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 22)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: IIC_Read /home/mjshen/RTOSExploration/Avem/libs/module/avm_i2c.c:104:9 5 1 0 0
+HAL: avm_motor_init /home/mjshen/RTOSExploration/Avem/libs/module/avm_motor.c:14:5 2 1 0 0
+HAL: motor_PWM_Init /home/mjshen/RTOSExploration/Avem/libs/module/avm_motor.c:23:18 2 1 0 0
+HAL: MPU_Sigle_Write /home/mjshen/RTOSExploration/Avem/libs/module/avm_mpu6050.c:25:8 2 1 0 0
+HAL: SystemInit /home/mjshen/RTOSExploration/Avem/libs/STM32_USB-FS-Device_Lib_V4.0.0/Libraries/CMSIS/Device/ST/STM32F10x/Source/Templates/system_stm32f10x.c:222:11 2 1 0 0
+HAL: SetSysClockTo72 /home/mjshen/RTOSExploration/Avem/libs/STM32_USB-FS-Device_Lib_V4.0.0/Libraries/CMSIS/Device/ST/STM32F10x/Source/Templates/system_stm32f10x.c:999:11 4 1 0 0
+HAL: SystemCoreClockUpdate /home/mjshen/RTOSExploration/Avem/libs/STM32_USB-FS-Device_Lib_V4.0.0/Libraries/CMSIS/Device/ST/STM32F10x/Source/Templates/system_stm32f10x.c:325:14 1 1 0 0
+HAL: IIC_Stop /home/mjshen/RTOSExploration/Avem/libs/module/avm_i2c.c:50:9 7 1 0 0
+HAL: NVIC_SetPriorityGrouping /home/mjshen/RTOSExploration/Avem/libs/STM32_USB-FS-Device_Lib_V4.0.0/Libraries/CMSIS/Include/core_cm3.h:1281:22 3 1 0 0
+HAL: jump2ISP /home/mjshen/RTOSExploration/Avem/libs/module/avm_core.c:14:16 2 1 0 0
+HAL: delay_ms /home/mjshen/RTOSExploration/Avem/libs/module/avm_core.c:21:16 2 1 0 0
+HAL: delay_us /home/mjshen/RTOSExploration/Avem/libs/module/avm_core.c:31:16 1 1 0 0
+HAL: IIC_init /home/mjshen/RTOSExploration/Avem/libs/module/avm_i2c.c:23:18 4 1 0 0
+HAL: IIC_Start /home/mjshen/RTOSExploration/Avem/libs/module/avm_i2c.c:41:9 6 1 0 0
+HAL: IIC_Ack /home/mjshen/RTOSExploration/Avem/libs/module/avm_i2c.c:61:9 5 1 0 0
+HAL: IIC_Wait_Ack /home/mjshen/RTOSExploration/Avem/libs/module/avm_i2c.c:72:9 7 1 0 0
+HAL: IIC_Send /home/mjshen/RTOSExploration/Avem/libs/module/avm_i2c.c:90:9 7 1 0 0
+HAL: uart_init /home/mjshen/RTOSExploration/Avem/libs/module/avm_uart.c:30:18 2 1 0 0
+HAL: NVIC_EnableIRQ /home/mjshen/RTOSExploration/Avem/libs/STM32_USB-FS-Device_Lib_V4.0.0/Libraries/CMSIS/Include/core_cm3.h:1310:39 4 1 0 0
+HAL: NVIC_SetPriority /home/mjshen/RTOSExploration/Avem/libs/STM32_USB-FS-Device_Lib_V4.0.0/Libraries/CMSIS/Include/core_cm3.h:1395:32 3 1 0 0
+HAL: USART1_IRQHandler /home/mjshen/RTOSExploration/Avem/libs/module/avm_uart.c:54:13 2 1 0 0
+HAL: uart_sendData /home/mjshen/RTOSExploration/Avem/libs/module/avm_uart.c:88:16 6 1 0 0
+-------------------------------------------------
+

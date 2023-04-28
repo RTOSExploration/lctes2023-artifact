@@ -1,0 +1,23 @@
+# of Node vs. Analysis time: 707 31
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 10)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 1 0 0
+HAL: kinetis_wddisable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_wdog.c:86:13 2 1 0 0
+HAL: kinetis_wdunlock /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_wdog.c:59:3 3 1 0 0
+HAL: kinetis_mpudisable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_mpuinit.c:125:12 2 1 0 0
+HAL: kinetis_pllconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_clockconfig.c:229:3 4 1 0 0
+HAL: kinesis_setdividers /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_clockconfig.c:494:12 4 1 0 0
+HAL: kinesis_portclocks /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_clockconfig.c:164:12 6 1 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_irq.c:351:16 5 1 0 0
+HAL: kinetis_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_lowputc.c:359:12 3 1 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/kinetis_timerisr.c:103:12 6 1 0 0
+-------------------------------------------------
+

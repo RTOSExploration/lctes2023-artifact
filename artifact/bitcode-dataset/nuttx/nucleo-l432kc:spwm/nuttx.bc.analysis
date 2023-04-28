@@ -1,0 +1,33 @@
+# of Node vs. Analysis time: 538 33
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 20)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: arm_fpuconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_fpuconfig.c:74:12 4 1 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 4 1 0 0
+HAL: arm_ramvec_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_ramvec_initialize.c:132:31 7 1 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4_lowputc.c:289:11 6 1 0 0
+HAL: stm32l4_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4_lowputc.c:357:9 3 1 0 0
+HAL: rcc_enableapb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4x3xx_rcc.c:258:12 5 1 0 0
+HAL: rcc_reset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4x3xx_rcc.c:79:12 4 1 0 0
+HAL: stm32l4_stdclockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4x3xx_rcc.c:605:13 6 1 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4_irq.c:313:3 7 1 0 0
+HAL: stm32l4_prioritize_syscall /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4_irq.c:222:13 8 1 0 0
+HAL: rcc_enableccip /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4x3xx_rcc.c:516:12 5 1 0 0
+HAL: rcc_enableahb1 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4x3xx_rcc.c:124:12 4 1 0 0
+HAL: rcc_enableahb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4x3xx_rcc.c:169:12 6 1 0 0
+HAL: rcc_enableahb3 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4x3xx_rcc.c:231:12 7 1 0 0
+HAL: rcc_enableapb2 /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4x3xx_rcc.c:432:12 5 1 0 0
+HAL: stm32l4_rcc_enablelse /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4_lse.c:69:12 7 1 0 0
+HAL: stm32l4_pwr_enableclk /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4_pwr.c:83:12 6 1 0 0
+HAL: stm32l4_pwr_enableusv /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4_pwr.c:177:12 3 1 0 0
+HAL: stm32_pwr_setvos /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4_pwr.c:400:13 3 1 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/stm32l4_timerisr.c:111:12 6 1 0 0
+-------------------------------------------------
+

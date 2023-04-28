@@ -1,0 +1,96 @@
+# of Node vs. Analysis time: 1327 122
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 2)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+Non-HAL: flash_end_addr /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/libraries/fds/fds.c:1631:38 11 0 1 0
+Non-HAL: app_error_fault_handler /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/libraries/util/app_error_weak.c:100:5 124 0 1 0
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 81)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: nrf_gpio_port_out_set /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:776:19 41 0 0 0
+HAL: nrf_gpio_port_in_read /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:758:19 12 0 0 0
+HAL: nrf_gpio_cfg /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:535:5 62 0 0 0
+HAL: nrf_gpio_port_out_clear /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:782:19 16 0 0 0
+HAL: NVIC_GetPriority.608 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1729:23 18 0 0 0
+HAL: NVIC_EnableIRQ.609 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1628:50 16 0 0 0
+HAL: NVIC_DisableIRQ.611 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1639:50 19 0 0 0
+HAL: NVIC_SetPendingIRQ /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1663:50 5 0 0 0
+HAL: RTC1_IRQHandler /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/libraries/timer/app_timer.c:909:33 2 0 0 0
+HAL: rtc1_counter_get /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/libraries/timer/app_timer.c:213:22 103 0 0 0
+HAL: NVIC_SetPendingIRQ.624 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1663:50 94 0 0 0
+HAL: rtc1_start /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/libraries/timer/app_timer.c:174:24 4 0 0 0
+HAL: rtc1_compare0_set /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/libraries/timer/app_timer.c:234:21 3 0 0 0
+HAL: rtc1_stop /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/libraries/timer/app_timer.c:193:24 6 0 0 0
+HAL: NVIC_DisableIRQ.626 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1639:50 11 0 0 0
+HAL: NVIC_ClearPendingIRQ /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1674:50 8 0 0 0
+HAL: NVIC_EnableIRQ.628 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1628:50 12 0 0 0
+HAL: timer_list_remove /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/libraries/timer/app_timer.c:329:35 4 0 0 0
+HAL: nrf_gpio_port_out_set.5 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:776:19 11 0 0 0
+HAL: nrf_gpio_port_out_clear.6 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:782:19 11 0 0 0
+HAL: nrf_gpio_cfg.11 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:535:30 48 0 0 0
+HAL: nrf_wdt_reload_request_enable /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_wdt.h:393:19 8 0 0 0
+HAL: NVIC_EnableIRQ.322 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1628:3 31 0 0 0
+HAL: NVIC_SetPriority.323 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1700:7 31 0 0 0
+HAL: nrf_gpio_cfg.327 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:535:5 52 0 0 0
+HAL: nrf_gpio_port_out_set.328 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:776:19 19 0 0 0
+HAL: nrf_uart_int_enable_check /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_uart.h:387:26 4 0 0 0
+HAL: NVIC_DisableIRQ.333 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1639:3 48 0 0 0
+HAL: nrf_power_gpregret2_set /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_power.h:1002:26 3 0 0 0
+HAL: nrf_gpio_port_in_read.37 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:758:19 11 0 0 0
+HAL: nrf_gpio_cfg.38 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:535:30 53 0 0 0
+HAL: NVIC_SystemReset.254 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1795:34 14 0 0 0
+HAL: nrf_power_system_off /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_power.h:889:26 14 0 0 0
+HAL: nrf_gpio_cfg.264 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:535:5 11 0 0 0
+HAL: nrf_gpio_cfg.170 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:535:5 5 0 0 0
+HAL: nrf_gpio_port_out_set.176 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:776:19 5 0 0 0
+HAL: nrf_gpio_port_out_clear.177 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_gpio.h:782:19 5 0 0 0
+HAL: SystemInit /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/mdk/system_nrf52810.c:106:46 2 1 0 0
+HAL: errata_103 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/mdk/system_nrf52810.c:373:9 3 1 0 0
+HAL: errata_108 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/mdk/system_nrf52810.c:384:12 2 1 0 0
+HAL: NVIC_SystemReset /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1795:34 124 0 0 0
+HAL: sd_nvic_critical_region_enter /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/softdevice/s112/headers/nrf_nvic.h:449:39 78 0 0 0
+HAL: sd_nvic_critical_region_exit /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/softdevice/s112/headers/nrf_nvic.h:471:19 78 0 0 0
+HAL: NVIC_GetPriority /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1723:7 2 0 0 0
+HAL: nrf_clock_lf_src_set /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_clock.h:442:25 2 0 0 0
+HAL: _NRFX_IRQ_IS_ENABLED /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/integration/nrfx/nrfx_glue.h:133:18 3 1 0 0
+HAL: NVIC_EnableIRQ /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1628:50 5 0 0 0
+HAL: NVIC_SetPriority /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1706:55 5 0 0 0
+HAL: nrf_clock_int_disable /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_clock.h:403:25 3 0 0 0
+HAL: NVIC_DisableIRQ /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1639:50 4 0 0 0
+HAL: nrf_clock_task_trigger /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_clock.h:418:50 3 0 0 0
+HAL: nrf_clock_hf_is_running /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_clock.h:482:24 4 0 0 0
+HAL: nrf_clock_lf_is_running /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_clock.h:464:25 4 0 0 0
+HAL: nrf_clock_event_clear /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_clock.h:428:50 4 0 0 0
+HAL: nrf_clock_int_enable /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_clock.h:398:25 3 0 0 0
+HAL: nrf_clock_event_check /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_clock.h:437:63 4 0 0 0
+HAL: nrf_saadc_event_check /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:587:62 8 0 0 0
+HAL: nrf_saadc_event_clear /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:592:50 9 0 0 0
+HAL: nrf_saadc_task_trigger /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:577:50 12 0 0 0
+HAL: nrf_saadc_buffer_init /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:728:27 8 0 0 0
+HAL: nrf_saadc_resolution_set /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:749:27 4 0 0 0
+HAL: nrf_saadc_oversample_set /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:754:27 5 0 0 0
+HAL: nrf_saadc_int_disable /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:692:25 9 0 0 0
+HAL: nrf_saadc_int_enable /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:682:25 12 0 0 0
+HAL: nrf_saadc_enable /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:711:23 6 0 0 0
+HAL: NVIC_EnableIRQ.297 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1628:50 5 0 0 0
+HAL: NVIC_SetPriority.298 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1706:55 6 0 0 0
+HAL: nrf_saadc_disable /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:716:23 6 0 0 0
+HAL: nrf_saadc_channel_input_set /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:663:28 20 0 0 0
+HAL: nrf_saadc_channel_limits_set /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:675:28 7 0 0 0
+HAL: NVIC_DisableIRQ.302 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1639:50 6 0 0 0
+HAL: nrf_saadc_channel_init /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:777:28 4 0 0 0
+HAL: nrf_saadc_task_address_get /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_saadc.h:582:44 2 0 0 0
+HAL: nrf_wdt_behaviour_set /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_wdt.h:298:21 9 0 0 0
+HAL: nrf_wdt_reload_value_set /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_wdt.h:383:18 7 0 0 0
+HAL: nrf_wdt_task_trigger /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_wdt.h:303:57 10 0 0 0
+HAL: nrf_wdt_reload_request_set /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/modules/nrfx/hal/nrf_wdt.h:408:5 4 0 0 0
+HAL: NVIC_SetPriority.631 /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/toolchain/cmsis/include/core_cm4.h:1706:5 10 0 0 0
+HAL: rtc1_init /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/libraries/timer/app_timer.c:165:25 8 0 0 0
+HAL: app_timer_pause /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/libraries/timer/app_timer.c:1067:26 2 0 0 0
+HAL: app_timer_resume /home/mjshen/RTOSExploration/nrf52-keyboard/SDK/components/libraries/timer/app_timer.c:1072:27 2 0 0 0
+-------------------------------------------------
+

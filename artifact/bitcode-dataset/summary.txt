@@ -1,0 +1,15 @@
+name #apps #macro TP FP FN TN
+Amazfitbip/ 1 17 0 35 0 3
+Avem/ 1 0 1 22 0 0
+Cicada-FW/ 12 59 0 0 0 0
+coreMQTT-Agent/ 1 20 0 2 1 5
+Embedded-GUI-for-MT2523/ 89 20 219 63 128 435
+esp-idf-examples/ 417 0 0 17 0 82
+InfiniTime/ 1 21 2 17 1 127
+mbed-os/ 35 0 1 11 1 129
+nrf52-keyboard/ 1 0 0 4 2 58
+nuttx/ 211 0 3 208 8 1292
+phoenix-rtos/ 21 0 0 6 0 0
+RP2040-FreeRTOS/ 4 1 6 20 0 52
+STM32_BASE/ 1 18 2 39 0 17
+zephyr-samples/ 193 0 5 17 0 351

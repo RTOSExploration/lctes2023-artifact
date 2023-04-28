@@ -1,0 +1,32 @@
+# of Node vs. Analysis time: 1119 66
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 19)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/imxrt_timerisr.c:201:3 7 1 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 1 1 0 0
+HAL: arm_memfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_memfault.c:63:19 2 1 0 0
+HAL: imxrt_tcmenable /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/imxrt_start.c:99:13 2 1 0 0
+HAL: imxrt_clockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/imxrt_clockconfig.c:412:10 3 1 0 0
+HAL: imxrt_pllsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/imxrt_clockconfig.c:305:13 4 1 0 0
+HAL: imxrt_lpuart_configure /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/imxrt_lowputc.c:380:8 4 1 0 0
+HAL: imxrt_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/imxrt_lowputc.c:571:11 5 1 0 0
+HAL: up_enable_icache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:129:3 3 1 0 0
+HAL: up_disable_icache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:166:13 1 1 0 0
+HAL: up_invalidate_icache_all /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:201:3 4 1 0 0
+HAL: up_enable_dcache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:235:12 2 1 0 0
+HAL: up_disable_dcache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:315:12 2 1 0 0
+HAL: up_invalidate_dcache /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:394:12 6 1 0 0
+HAL: up_invalidate_dcache_all /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_cache.c:468:12 2 1 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/imxrt_irq.c:421:16 6 1 0 0
+HAL: imxrt_prioritize_syscall /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/imxrt_irq.c:290:13 6 1 0 0
+HAL: imxrt_gpioirq_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/imxrt_gpioirq.c:624:3 7 1 0 0
+HAL: imxrt_gpio1_0_15_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/imxrt_gpioirq.c:244:12 1 1 0 0
+-------------------------------------------------
+

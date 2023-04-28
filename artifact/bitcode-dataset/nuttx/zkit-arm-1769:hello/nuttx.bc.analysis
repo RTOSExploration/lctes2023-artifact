@@ -1,0 +1,35 @@
+# of Node vs. Analysis time: 651 40
+=================================================
+LLVM-TUTOR: Non-conventional MMIO functions (# = 0)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+-------------------------------------------------
+
+=================================================
+LLVM-TUTOR: Conventional (HAL) MMIO functions (# = 22)
+Function, Location of MMIO inst, TC In-degree, NCMA(CG), NCMA(truth), Macro
+-------------------------------------------------
+HAL: lpc17_40_clockconfig /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc176x_clockconfig.c:83:3 4 0 0 0
+HAL: arm_lowputc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_lowputc.c:261:11 6 0 0 0
+HAL: lpc17_40_lowsetup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_lowputc.c:311:13 2 0 0 0
+HAL: lpc17_40_interrupt /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:1175:12 2 0 0 0
+HAL: lpc17_40_rxdone_work /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:856:13 2 0 0 0
+HAL: lpc17_40_txdone_work /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:1132:7 1 0 0 0
+HAL: lpc17_40_transmit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:638:13 6 0 0 0
+HAL: lpc17_40_txdesc /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:581:13 6 0 0 0
+HAL: lpc17_40_txtimeout_expiry /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:1418:3 2 0 0 0
+HAL: lpc17_40_response /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:815:7 3 0 0 0
+HAL: up_irqinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_irq.c:310:16 7 0 0 0
+HAL: arm_hardfault /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/armv7-m/arm_hardfault.c:76:19 2 1 0 0
+HAL: lpc17_40_ethinitialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:3161:13 7 0 0 0
+HAL: lpc17_40_ifup /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:1553:3 3 0 0 0
+HAL: lpc17_40_ethreset /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:3076:3 14 0 0 0
+HAL: lpc17_40_phyinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:2523:3 6 0 0 0
+HAL: lpc17_40_macmode /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:3008:7 6 0 0 0
+HAL: lpc17_40_txdescinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:2877:3 5 0 0 0
+HAL: lpc17_40_rxdescinit /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:2933:3 5 0 0 0
+HAL: lpc17_40_phyread /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:2287:3 27 0 0 0
+HAL: lpc17_40_phywrite /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_ethernet.c:2243:3 25 0 0 0
+HAL: up_timer_initialize /home/mjshen/RTOSExploration/nuttxspace/nuttx/arch/arm/src/chip/lpc17_40_timerisr.c:103:13 3 0 0 0
+-------------------------------------------------
+
