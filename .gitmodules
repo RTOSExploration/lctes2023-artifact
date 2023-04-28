@@ -1,0 +1,3 @@
+[submodule "artifact/HalVD"]
+	path = artifact/HalVD
+	url = https://github.com/szsam/HalVD
