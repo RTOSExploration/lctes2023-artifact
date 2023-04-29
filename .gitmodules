@@ -1,3 +1,7 @@
 [submodule "artifact/HalVD"]
 	path = artifact/HalVD
 	url = https://github.com/szsam/HalVD
+[submodule "artifact/apps/Amazfitbip-FreeRTOS"]
+	path = artifact/apps/Amazfitbip-FreeRTOS
+	url = https://github.com/RTOSExploration/Amazfitbip-FreeRTOS.git
+	branch = wllvm
