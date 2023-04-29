@@ -72,3 +72,19 @@ cd artifact/bitcode-db
 The summary report will be in `artifact/bitcode-db/summary.txt`.
 
 ### Generate bitcode yourself
+| Repository | Build instructions |
+| --- | --- |
+| Amazfitbip | |
+| Avem | |
+| Cicada-FW | |
+| coreMQTT-Agent | |
+| Embedded-GUI-for-MT2523 | |
+| esp-idf-examples | |
+| InfiniTime | |
+|  mbed-os | |
+| nrf52-keyboard | |
+| nuttx | |
+| phoenix-rtos | |
+| RP2040-FreeRTOS | |
+|  STM32_BASE | |
+| zephyr-samples | |
