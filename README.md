@@ -53,6 +53,7 @@ artifact/
 │   └── summary.txt          # Summary of results for all apps in the dataset (Table 1 in paper)
 ├── apps                     # Repositories of applications
 ├── toolchain                # Compilation toolchain for Arm
+├── whole-program-llvm       # Our fork of wllvm
 ├── bin-wrapper              # Wrapper for wllvm
 └── HalVD                    # The static analysis tool
 ```
@@ -76,6 +77,10 @@ The summary report will be in `artifact/bitcode-db/summary.txt`.
 
 ### Generate bitcode yourself
 #### Installing our fork of wllvm
+``` bash
+sudo pip install -e artifact/whole-program-llvm
+```
+This installs wllvm in /usr/local/bin.
 
 #### Add arm-none-eabi-gcc to PATH
 `export PATH=$RTOSExploration/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin:$PATH`
