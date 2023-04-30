@@ -5,3 +5,50 @@
 	path = artifact/apps/Amazfitbip-FreeRTOS
 	url = https://github.com/RTOSExploration/Amazfitbip-FreeRTOS.git
 	branch = wllvm
+[submodule "artifact/apps/Avem"]
+	path = artifact/apps/Avem
+	url = https://github.com/RTOSExploration/Avem.git
+	branch = wllvm
+[submodule "artifact/apps/Cicada-FW"]
+	path = artifact/apps/Cicada-FW
+	url = https://github.com/RTOSExploration/Cicada-FW.git
+	branch = wllvm
+[submodule "artifact/apps/Embedded-GUI-for-MT2523"]
+	path = artifact/apps/Embedded-GUI-for-MT2523
+	url = https://github.com/RTOSExploration/Embedded-GUI-for-MT2523.git
+	branch = wllvm
+[submodule "artifact/apps/esp-build"]
+	path = artifact/apps/esp-build
+	url = https://github.com/RTOSExploration/esp-build.git
+[submodule "artifact/apps/InfiniTime"]
+	path = artifact/apps/InfiniTime
+	url = https://github.com/RTOSExploration/InfiniTime.git
+	branch = wllvm
+[submodule "artifact/apps/coreMQTT-Agent-Demos"]
+	path = artifact/apps/coreMQTT-Agent-Demos
+	url = https://github.com/RTOSExploration/coreMQTT-Agent-Demos.git
+	branch = wllvm
+[submodule "artifact/apps/nrf52-keyboard"]
+	path = artifact/apps/nrf52-keyboard
+	url = https://github.com/RTOSExploration/nrf52-keyboard.git
+	branch = wllvm
+[submodule "artifact/apps/nuttx-gen-wllvm"]
+	path = artifact/apps/nuttx-gen-wllvm
+	url = https://github.com/RTOSExploration/nuttx-gen-wllvm.git
+[submodule "artifact/apps/phoenix-rtos-project"]
+	path = artifact/apps/phoenix-rtos-project
+	url = https://github.com/RTOSExploration/phoenix-rtos-project.git
+[submodule "artifact/apps/RP2040-FreeRTOS"]
+	path = artifact/apps/RP2040-FreeRTOS
+	url = https://github.com/RTOSExploration/RP2040-FreeRTOS.git
+	branch = wllvm
+[submodule "artifact/apps/STM32_Base_Project"]
+	path = artifact/apps/STM32_Base_Project
+	url = https://github.com/RTOSExploration/STM32_Base_Project.git
+	branch = wllvm
+[submodule "artifact/apps/zephyr-build"]
+	path = artifact/apps/zephyr-build
+	url = https://github.com/RTOSExploration/zephyr-build.git
+[submodule "artifact/apps/mbed-os-gen-wllvm"]
+	path = artifact/apps/mbed-os-gen-wllvm
+	url = https://github.com/RTOSExploration/mbed-os-gen-wllvm.git
