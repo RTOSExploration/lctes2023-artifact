@@ -52,3 +52,7 @@
 [submodule "artifact/apps/mbed-os-gen-wllvm"]
 	path = artifact/apps/mbed-os-gen-wllvm
 	url = https://github.com/RTOSExploration/mbed-os-gen-wllvm.git
+[submodule "artifact/whole-program-llvm"]
+	path = artifact/whole-program-llvm
+	url = https://github.com/szsam/whole-program-llvm.git
+	branch = dev
