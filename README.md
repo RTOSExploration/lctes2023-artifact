@@ -51,6 +51,9 @@ artifact/
 │   ├── ...                  # More applications
 │   ├── summarize.sh         # Bash script to generate the summaries
 │   └── summary.txt          # Summary of results for all apps in the dataset (Table 1 in paper)
+├── apps                     # Repositories of applications
+├── toolchain                # Compilation toolchain for Arm
+├── bin-wrapper              # Wrapper for wllvm
 └── HalVD                    # The static analysis tool
 ```
 
@@ -72,19 +75,31 @@ cd artifact/bitcode-db
 The summary report will be in `artifact/bitcode-db/summary.txt`.
 
 ### Generate bitcode yourself
+#### Installing our fork of wllvm
+
+#### Add arm-none-eabi-gcc to PATH
+`export PATH=$RTOSExploration/toolchain/gcc-arm-none-eabi-10.3-2021.10/bin:$PATH`
+
+#### Scripts for generating bitcode
+The directory `artifact/apps` contains repositories for each app in the dataset.
+Each repo contains a bash script `gen-wllvm.sh` that generates bitcode for this repo.
+It's necessary to read official documentations of applications to setup the development environment. Don't expect `gen-wllvm.sh` will magically work out-of-the-box.
+
+<!---
 | Repository | Build instructions |
 | --- | --- |
-| Amazfitbip | |
-| Avem | |
-| Cicada-FW | |
-| coreMQTT-Agent | |
-| Embedded-GUI-for-MT2523 | |
-| esp-idf-examples | |
-| InfiniTime | |
-|  mbed-os | |
-| nrf52-keyboard | |
-| nuttx | |
-| phoenix-rtos | |
-| RP2040-FreeRTOS | |
-|  STM32_BASE | |
-| zephyr-samples | |
+| Amazfitbip | https://github.com/RTOSExploration/Amazfitbip-FreeRTOS/blob/wllvm/gen-wllvm.sh |
+| Avem | https://github.com/RTOSExploration/Avem/blob/wllvm/gen-wllvm.sh |
+| Cicada-FW | https://github.com/RTOSExploration/Cicada-FW/blob/wllvm/gen-wllvm.sh |
+| coreMQTT-Agent | https://github.com/RTOSExploration/coreMQTT-Agent-Demos/blob/wllvm/gen-wllvm.sh |
+| Embedded-GUI-for-MT2523 | https://github.com/RTOSExploration/Embedded-GUI-for-MT2523/blob/wllvm/gen-wllvm.sh |
+| esp-idf-examples | https://github.com/RTOSExploration/esp-build/blob/main/gen-wllvm.sh |
+| InfiniTime | https://github.com/RTOSExploration/InfiniTime/blob/wllvm/gen-wllvm.sh |
+|  mbed-os | https://github.com/RTOSExploration/mbed-os-gen-wllvm/blob/main/gen-wllvm.sh |
+| nrf52-keyboard | https://github.com/RTOSExploration/nrf52-keyboard/blob/wllvm/gen-wllvm.sh |
+| nuttx | https://github.com/RTOSExploration/nuttx-gen-wllvm/blob/main/gen-wllvm.sh |
+| phoenix-rtos | https://github.com/RTOSExploration/phoenix-rtos-project/tree/wllvm |
+| RP2040-FreeRTOS | https://github.com/RTOSExploration/RP2040-FreeRTOS/blob/wllvm/gen-wllvm.sh |
+|  STM32_BASE | https://github.com/RTOSExploration/STM32_Base_Project/blob/wllvm/gen-wllvm.sh |
+| zephyr-samples | https://github.com/RTOSExploration/zephyr-build/blob/main/gen-wllvm.sh |
+--->
