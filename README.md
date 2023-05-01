@@ -1,6 +1,27 @@
 # LCTES23-WIP: Towards Automated Identification of Layering Violations in Embedded Applications
 
-## Getting Started Guide
+This is a tool to detect layering violations in embedded applications. The tool uses LLVM and requires a bitcode file of the target application.
+
+Specifically, given a bitcode file, our tool will generate the list of all NCMAs (a type of layering violations).
+
+## Using Docker
+> Instructions to use our pre-built docker container.
+
+We have created a docker container having all the necessary tools and data required to run our tool and reproduce the results of our paper.
+
+### Setup
+<!-- Setup instructions for docker and docker pull and run-->
+
+### Running on a Bitcode file.
+<!--Inside the docker..what to do?-->
+
+### Reproducing Results
+<!--Inside the docker..what to do?.-->
+
+
+## Standalone Installation
+
+> Instructions for standalone installation outside docker on Ubuntu 20.04 desktop OS.
 <!-- Contain instructions on how to set up (including, for example, a pointer to the VM player software, its version, and passwords if needed) and test your artifact. Anyone following this guide should be able to handle the rest of your artifact easily. -->
 
 The following instructions install the development environment of HalVD (our static analysis tool) and run it on a sample application.
@@ -35,7 +56,7 @@ $LLVM_DIR/bin/opt -load-pass-plugin build/lib/libFindMMIOFunc.so -load-pass-plug
 The result will be in `artifact/HalVD/InfiniTime.analysis`.
 
 
-## Step-by-Step Instructions
+### Step-by-Step Instructions
 <!-- Detail how your artifact can be evaluated. Include appropriate references to the relevant sections of your paper.
 
 Explain how to reproduce experiments or other activities supporting your paper’s conclusions. Write this for readers who are deeply interested in your work and are studying to improve or compare against it. If your artifact runs for more than a few minutes, point this out and explain how to run it on smaller inputs. -->
