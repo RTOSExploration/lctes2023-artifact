@@ -1,4 +1,4 @@
-# LCTES23-WIP: Towards Automated Identification of Layering Violations in Embedded Applications
+# LCTES23-WIP #9: Towards Automated Identification of Layering Violations in Embedded Applications
 
 This is a tool to detect layering violations in embedded applications. The tool uses LLVM and requires a bitcode file of the target application.
 
