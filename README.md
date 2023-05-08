@@ -1,6 +1,62 @@
-# LCTES23-WIP: Towards Automated Identification of Layering Violations in Embedded Applications
+# LCTES23-WIP #9: Towards Automated Identification of Layering Violations in Embedded Applications
 
-## Getting Started Guide
+This is a tool to detect layering violations in embedded applications. The tool uses LLVM and requires a bitcode file of the target application.
+
+Specifically, given a bitcode file, our tool will generate the list of all NCMAs (a type of layering violations).
+
+## Directory structure of artifact
+``` bash
+artifact/
+├── bitcode-db               # Dataset of applications
+│   ├── Amazfitbip           # An application or a type of applications
+│   │   ├── *.bc             # Bitcode file of an app
+│   │   ├── *.bc.analysis    # HalVD's analysis result for this app
+│   │   └── summary.txt      # Summary of results for all apps in this sub directory
+│   ├── ...                  # More applications
+│   ├── summarize.sh         # Bash script to generate the summaries
+│   └── summary.txt          # Summary of results for all apps in the dataset (Table 1 in paper)
+├── apps                     # Repositories of applications
+├── toolchain                # Compilation toolchain for Arm
+├── whole-program-llvm       # Our fork of wllvm
+├── bin-wrapper              # Wrapper for wllvm
+└── HalVD                    # The static analysis tool
+```
+
+## Using Docker
+> Instructions to use our pre-built docker container.
+
+We have created a docker container having all the necessary tools and data required to run our tool and reproduce the results of our paper.
+
+### Setup
+<!-- Setup instructions for docker and docker pull and run-->
+``` bash
+docker pull szsam2023/lctes2023-artifact:latest
+docker run --rm -it -w=/root/lctes2023-artifact/artifact szsam2023/lctes2023-artifact:latest
+```
+
+### Running on a Bitcode file
+<!--Inside the docker..what to do?-->
+For example, to run HalVD on InfiniTime:
+``` bash
+cd HalVD
+$LLVM_DIR/bin/opt -load-pass-plugin build/lib/libFindMMIOFunc.so -load-pass-plugin build/lib/libFindHALBypass.so --passes='print<hal-bypass>' --disable-output ../bitcode-db/InfiniTime/pinetime-app-1.10.0.out.bc 2> InfiniTime.analysis
+```
+The result will be in `artifact/HalVD/InfiniTime.analysis`.
+
+### Reproducing Results (Table 1 in paper)
+<!--Inside the docker..what to do?.-->
+``` bash
+cd HalVD
+./run.sh # Takes 70 sec on a 20-core CPU
+cd ../bitcode-db
+./summarize.sh
+```
+The summary report will be in `artifact/bitcode-db/summary.txt`.
+Note that results may be slightly different between runs due to the random algorithms in HalVD.
+
+## Standalone Installation
+
+> Instructions for standalone installation outside docker on Ubuntu 20.04 desktop OS.
 <!-- Contain instructions on how to set up (including, for example, a pointer to the VM player software, its version, and passwords if needed) and test your artifact. Anyone following this guide should be able to handle the rest of your artifact easily. -->
 
 The following instructions install the development environment of HalVD (our static analysis tool) and run it on a sample application.
@@ -35,28 +91,12 @@ $LLVM_DIR/bin/opt -load-pass-plugin build/lib/libFindMMIOFunc.so -load-pass-plug
 The result will be in `artifact/HalVD/InfiniTime.analysis`.
 
 
-## Step-by-Step Instructions
-<!-- Detail how your artifact can be evaluated. Include appropriate references to the relevant sections of your paper.
+<!--### Step-by-Step Instructions
+ Detail how your artifact can be evaluated. Include appropriate references to the relevant sections of your paper.
 
 Explain how to reproduce experiments or other activities supporting your paper’s conclusions. Write this for readers who are deeply interested in your work and are studying to improve or compare against it. If your artifact runs for more than a few minutes, point this out and explain how to run it on smaller inputs. -->
 
-### Directory structure of artifact
-``` bash
-artifact/
-├── bitcode-db               # Dataset of applications
-│   ├── Amazfitbip           # An application or a type of applications
-│   │   ├── *.bc             # Bitcode file of an app
-│   │   ├── *.bc.analysis    # HalVD's analysis result for this app
-│   │   └── summary.txt      # Summary of results for all apps in this sub directory
-│   ├── ...                  # More applications
-│   ├── summarize.sh         # Bash script to generate the summaries
-│   └── summary.txt          # Summary of results for all apps in the dataset (Table 1 in paper)
-├── apps                     # Repositories of applications
-├── toolchain                # Compilation toolchain for Arm
-├── whole-program-llvm       # Our fork of wllvm
-├── bin-wrapper              # Wrapper for wllvm
-└── HalVD                    # The static analysis tool
-```
+
 
 ### Reproduce Results of HalVD in finding NCMAs (Table 1 in paper)
 #### Run HalVD on all bitcode files in dataset
@@ -75,7 +115,9 @@ cd artifact/bitcode-db
 ```
 The summary report will be in `artifact/bitcode-db/summary.txt`.
 
-### Generate bitcode yourself
+
+## Generate bitcode yourself (Optional)
+We have included compiled bitcode of all applications in the dataset. This section is only for people who are interested in generating the bitcode themselves.
 #### Installing our fork of wllvm
 ``` bash
 sudo pip install -e artifact/whole-program-llvm
